@@ -158,33 +158,12 @@
             right: 6.125rem;
         }
     </style>
-    <script>
-        $(function() {
-            // var script = document.createElement('script');
-            // script.type = 'text/javascript';
-
-            // // 传参一个回调函数名给后端，方便后端返回时执行这个在前端定义的回调函数
-            // script.src = 'https://github.com/731016/imgSave/blob/master/note_img202110291914167.jpg?callback=handleCallback';
-            // document.head.appendChild(script);
-
-            // // 回调执行函数
-            // function handleCallback(res) {
-            //     alert(JSON.stringify(res));
-            // }
-            function handleResponse(response) {
-                console.log('The responsed data is: ' + response.data);
-            }
-            var script = document.createElement('script');
-            script.src = 'https://github.com/731016/imgSave/blob/master/note_img202110291914167.jpg?callback=handleResponse';
-            document.body.insertBefore(script, document.body.firstChild);
-        })
-    </script>
 </head>
 
 <body>
     <div class="main">
         <div class="resume">
-            <img class="tu_aofei" id="img" crossorigin="anonymous" src="" alt="暂时无法显示">
+            <img class="tu_aofei" id="img" crossorigin="anonymous" src="https://github.com/731016/imgSave/blob/master/note_img202110291914167.jpg?raw=true" alt="暂时无法显示">
             <header>
                 <div class="title">
                     <h2 class="title_left">涂鏊飞</h2>
