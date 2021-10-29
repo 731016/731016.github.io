@@ -158,12 +158,33 @@
             right: 6.125rem;
         }
     </style>
+    <script>
+        $(function() {
+            // var script = document.createElement('script');
+            // script.type = 'text/javascript';
+
+            // // 传参一个回调函数名给后端，方便后端返回时执行这个在前端定义的回调函数
+            // script.src = 'https://github.com/731016/imgSave/blob/master/note_img202110291914167.jpg?callback=handleCallback';
+            // document.head.appendChild(script);
+
+            // // 回调执行函数
+            // function handleCallback(res) {
+            //     alert(JSON.stringify(res));
+            // }
+            function handleResponse(response) {
+                console.log('The responsed data is: ' + response.data);
+            }
+            var script = document.createElement('script');
+            script.src = 'https://github.com/731016/imgSave/blob/master/note_img202110291914167.jpg?callback=handleResponse';
+            document.body.insertBefore(script, document.body.firstChild);
+        })
+    </script>
 </head>
 
 <body>
     <div class="main">
         <div class="resume">
-            <img class="tu_aofei" src="https://github.com/731016/imgSave/blob/master/note_img202110291914167.jpg" alt="暂时无法显示">
+            <img class="tu_aofei" id="img" crossorigin="anonymous" src="" alt="暂时无法显示">
             <header>
                 <div class="title">
                     <h2 class="title_left">涂鏊飞</h2>
@@ -191,6 +212,17 @@
                     </ul>
                 </div>
             </header>
+            <section class="one">
+                <div class="top">
+                    <h2>个人描述</h2>
+                    <div class="content font">
+                        <div>GPA : 1.23 / 5 排名：1 / 100 (或5%) CET-6 : 678 证书：软件设计师</div>
+                        <div>职务 :。。。 </div>
+                        <div>方向 : 后端开发 特点 : 热爱编程、。。。</div>
+                    </div>
+                </div>
+                <div class="bottom"></div>
+            </section>
             <section class="one">
                 <div class="top">
                     <h2>个人描述</h2>
