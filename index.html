@@ -38,21 +38,6 @@
             font-size: 12px;
         }
         
-        @media screen and (min-width:320px) {
-            .main {
-                width: 100%;
-            }
-            html {
-                font-size: 1rem;
-            }
-        }
-        
-        @media screen and (min-width:640px) {
-            html {
-                font-size: 1rem;
-            }
-        }
-        
         .main {
             position: relative;
             width: 75rem;
@@ -143,6 +128,7 @@
         
         .top h2 {
             font-weight: 700;
+            color: #6a90a5;
         }
         
         .content {
@@ -152,9 +138,32 @@
         img.tu_aofei {
             position: absolute;
             vertical-align: middle;
-            width: 200px;
-            top: 3.625rem;
+            width: 12.5rem;
+            top: 4.625rem;
             right: 6.125rem;
+        }
+        
+        @media all and (max-width:640px) {
+            html {
+                font-size: 12px;
+            }
+            .main {
+                width: 100vw;
+            }
+            img.tu_aofei {
+                top: 1.625rem;
+                right: 1.125rem;
+                width: 5.5rem;
+                box-shadow: 1px 1px #A7C0DC, -1px 1px .4em #A7C0DC;
+            }
+            .top h2 {
+                font-size: 1.125rem;
+            }
+            section.one {
+                margin: 1.5rem auto;
+                max-width: 100%;
+                height: 7.625rem;
+            }
         }
     </style>
 </head>
