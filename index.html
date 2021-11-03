@@ -1,8 +1,8 @@
 <!doctype html>
-<html style='font-size:14px !important'>
+<html>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>涂鏊飞 tu_aofei@163.com Java开发</title>
+
 <style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
 .mac-os-11 { --title-bar-height:28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
@@ -134,7 +134,7 @@ a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; 
 .md-fn-count::after { content: "."; }
 code, pre, samp, tt { font-family: var(--monospace); }
 kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
-.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
 code { text-align: left; vertical-align: initial; }
 a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
 .os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
@@ -155,7 +155,6 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-diagram-panel .messageText { stroke: none !important; }
 .md-diagram-panel .start-state { fill: var(--node-fill); }
 .md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
-.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
 .md-fences.md-fences-math { font-size: 1em; }
 .md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
 .md-fences-advanced:not(.md-focus) { background: inherit; }
@@ -1270,155 +1269,9 @@ a.ty-link {
 }
 
 
-mjx-container[jax="SVG"] {
-  direction: ltr;
-}
-
-mjx-container[jax="SVG"] > svg {
-  overflow: visible;
-  min-height: 1px;
-  min-width: 1px;
-}
-
-mjx-container[jax="SVG"] > svg a {
-  fill: blue;
-  stroke: blue;
-}
-
-mjx-assistive-mml {
-  position: absolute !important;
-  top: 0px;
-  left: 0px;
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 1px 0px 0px 0px !important;
-  border: 0px !important;
-  display: block !important;
-  width: auto !important;
-  overflow: hidden !important;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-mjx-assistive-mml[display="block"] {
-  width: 100% !important;
-}
-
-mjx-container[jax="SVG"][display="true"] {
-  display: block;
-  text-align: center;
-  margin: 1em 0;
-}
-
-mjx-container[jax="SVG"][display="true"][width="full"] {
-  display: flex;
-}
-
-mjx-container[jax="SVG"][justify="left"] {
-  text-align: left;
-}
-
-mjx-container[jax="SVG"][justify="right"] {
-  text-align: right;
-}
-
-g[data-mml-node="merror"] > g {
-  fill: red;
-  stroke: red;
-}
-
-g[data-mml-node="merror"] > rect[data-background] {
-  fill: yellow;
-  stroke: none;
-}
-
-g[data-mml-node="mtable"] > line[data-line], svg[data-table] > g > line[data-line] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > rect[data-frame], svg[data-table] > g > rect[data-frame] {
-  stroke-width: 70px;
-  fill: none;
-}
-
-g[data-mml-node="mtable"] > .mjx-dashed, svg[data-table] > g > .mjx-dashed {
-  stroke-dasharray: 140;
-}
-
-g[data-mml-node="mtable"] > .mjx-dotted, svg[data-table] > g > .mjx-dotted {
-  stroke-linecap: round;
-  stroke-dasharray: 0,140;
-}
-
-g[data-mml-node="mtable"] > g > svg {
-  overflow: visible;
-}
-
-[jax="SVG"] mjx-tool {
-  display: inline-block;
-  position: relative;
-  width: 0;
-  height: 0;
-}
-
-[jax="SVG"] mjx-tool > mjx-tip {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-mjx-tool > mjx-tip {
-  display: inline-block;
-  padding: .2em;
-  border: 1px solid #888;
-  font-size: 70%;
-  background-color: #F8F8F8;
-  color: black;
-  box-shadow: 2px 2px 5px #AAAAAA;
-}
-
-g[data-mml-node="maction"][data-toggle] {
-  cursor: pointer;
-}
-
-mjx-status {
-  display: block;
-  position: fixed;
-  left: 1em;
-  bottom: 1em;
-  min-width: 25%;
-  padding: .2em .4em;
-  border: 1px solid #888;
-  font-size: 90%;
-  background-color: #F8F8F8;
-  color: black;
-}
-
-foreignObject[data-mjx-xml] {
-  font-family: initial;
-  line-height: normal;
-  overflow: visible;
-}
-
-mjx-container[jax="SVG"] path[data-c], mjx-container[jax="SVG"] use[data-c] {
-  stroke-width: 3;
-}
-
-g[data-mml-node="xypic"] path {
-  stroke-width: inherit;
-}
-
-.MathJax g[data-mml-node="xypic"] path {
-  stroke-width: inherit;
-}
-
-</style><title>垃级Android开发工程师</title>
+</style><title>涂鏊飞 tu_aofei@163.com Java开发</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
-<div id='write'  class=''><h1 id='java开发'><span>Java开发</span></h1><h2 id='涂鏊飞'><span>涂鏊飞</span></h2><p><strong><span>男</span><span>	</span></strong><span>|</span><span>	</span><strong><span>湖北工程学院</span></strong><span>	</span><span>|</span><span>	</span><strong><span>本科</span></strong><span>	</span><span>|</span><span>	</span><strong><span>计算机科学与技术</span></strong></p><p><strong><span>17683866724</span></strong><span>	</span><span>|</span><span>	</span><strong><a href='mailto:tu_aofei@163.com' target='_blank' class='url'>tu_aofei@163.com</a></strong></p><h2 id='个人描述'><span>个人描述</span></h2><figure><table><thead><tr><th style='text-align:left;' ><span>方向</span></th><th style='text-align:left;' ><span>Java开发</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>XXX</span></td><td style='text-align:left;' ><span>XXX</span></td></tr><tr><td style='text-align:left;' ><span>个人博客</span></td><td style='text-align:left;' ><a href='https://blog.csdn.net/qq_41666142' target='_blank' class='url'>https://blog.csdn.net/qq_41666142</a><span> </span><a href='https://blog.csdn.net/qq_41666142'><img src="https://img.shields.io/badge/csdn-%E8%A2%AB%E8%AE%BF%E9%97%AE%E9%87%8F287%2C384-green" referrerpolicy="no-referrer" alt="img"></a></td></tr><tr><td style='text-align:left;' ><span>Github</span></td><td style='text-align:left;' ><a href='https://github.com/731016' target='_blank' class='url'>https://github.com/731016</a></td></tr><tr><td style='text-align:left;' ><span>Gitee</span></td><td style='text-align:left;' ><a href='https://gitee.com/LovelyHzz' target='_blank' class='url'>https://gitee.com/LovelyHzz</a><span> </span><a href='https://gitee.com/LovelyHzz'><img src="https://img.shields.io/badge/Gitee-9%E4%B8%AA%E9%A1%B9%E7%9B%AE-orange" referrerpolicy="no-referrer" alt="img"></a></td></tr><tr><td style='text-align:left;' ><span>擅长领域</span></td><td style='text-align:left;' ><mark><span>吹逼</span></mark><span> </span><mark><span>喷人</span></mark><span> </span><mark><span>抬杠</span></mark></td></tr></tbody></table></figure><h2 id='教育'><span>教育</span></h2><p><span>2012 - 2016    华中科技大学(HUST)    本科</span></p><p><span> </span></p><h2 id='技能点'><span>技能点</span></h2><ul><li><span>熟悉Kotlin/Swift</span></li><li><span>擅长MVVM架构设计</span></li><li><span>熟练使用6k显示器</span></li><li><span>熟悉iMac/MacBookPro/MacMini</span></li><li><span>熟悉数据库/应用存储</span></li><li><span>擅长基建/框架开发</span></li><li><span>熟悉Git/SVN代码版本控制管理</span></li><li><span>熟悉使用Mac/Windows/Linux</span></li><li><span>长期贡献参与成熟的开源项目</span></li></ul><p><span> </span></p><h2 id='成就'><span>成就</span></h2><p><span>创始人</span></p><p><span>董事局主席兼首席执行官</span></p><h2 id='公司'><span>公司</span></h2><figure><table><thead><tr><th style='text-align:left;' ><span>时间</span></th><th style='text-align:left;' ><span>公司名称</span></th><th style='text-align:left;' ><span>职位</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>yyyy.MM - yyyy.MM</span></td><td style='text-align:left;' ><span>XXX</span></td><td style='text-align:left;' ><span>XXX</span></td></tr></tbody></table></figure><p><span> </span></p><h2 id='项目'><span>项目</span></h2><h4 id='xxx'><span>xxx</span></h4><p><span>yyyy.MM - yyyy.MM</span><span>	</span><span>职位</span></p><p><span>介绍。。。。。。。。。。。。。</span></p><ul><li><span>XXXXXXXXX</span></li><li><span>XXXXXXXXX</span></li></ul><h2 id='评价'><span>评价</span></h2><ul><li><span>注重代码可读性/耦合度</span></li><li><span>保持高质量代码和提交记录</span></li><li><span>热爱技术和代码</span></li><li><span>熟悉团队协作</span></li><li><span>结合实际需求思考技术选型</span></li></ul><p><span> </span></p></div></div>
+<div id='write'  class=''><h1 id='涂鏊飞的个人简历'><span>涂鏊飞的个人简历</span></h1><h1 ><a href='https://blog.csdn.net/qq_41666142'><img src="https://img.shields.io/badge/csdn-%E8%A2%AB%E8%AE%BF%E9%97%AE%E9%87%8F287%2C384-green" referrerpolicy="no-referrer" alt="img"></a><span> </span><a href='https://gitee.com/LovelyHzz'><img src="https://img.shields.io/badge/Gitee-9%E4%B8%AA%E9%A1%B9%E7%9B%AE-orange" referrerpolicy="no-referrer" alt="img"></a><a href='https://github.com/731016'><img src="https://img.shields.io/github/followers/731016?style=social" referrerpolicy="no-referrer" alt="img"></a></h1><p>&nbsp;</p><h2 id='涂鏊飞'><span>涂鏊飞</span></h2><p><strong><span>男</span><span>	</span></strong><span>|</span><span>	</span><strong><span>湖北工程学院</span></strong><span>	</span><span>|</span><span>	</span><strong><span>本科</span></strong><span>	</span><span>|</span><span>	</span><strong><span>计算机科学与技术</span></strong></p><p><strong><span>17683866724</span></strong><span>	</span><span>|</span><span>	</span><strong><a href='mailto:tu_aofei@163.com' target='_blank' class='url'>tu_aofei@163.com</a></strong></p><h2 id='个人描述'><span>个人描述</span></h2><figure><table><thead><tr><th style='text-align:left;' ><span>方向</span></th><th style='text-align:left;' ><span>Java开发</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>XXX</span></td><td style='text-align:left;' ><span>XXX</span></td></tr><tr><td style='text-align:left;' ><span>擅长领域</span></td><td style='text-align:left;' ><mark><span>吹逼</span></mark><span> </span><mark><span>喷人</span></mark><span> </span><mark><span>抬杠</span></mark></td></tr></tbody></table></figure><h2 id='教育'><span>教育</span></h2><p><span>2012 - 2016    华中科技大学(HUST)    本科</span></p><p><span> </span></p><h2 id='技能点'><span>技能点</span></h2><ul><li><span>熟悉Kotlin/Swift</span></li><li><span>擅长MVVM架构设计</span></li><li><span>熟练使用6k显示器</span></li><li><span>熟悉iMac/MacBookPro/MacMini</span></li><li><span>熟悉数据库/应用存储</span></li><li><span>擅长基建/框架开发</span></li><li><span>熟悉Git/SVN代码版本控制管理</span></li><li><span>熟悉使用Mac/Windows/Linux</span></li><li><span>长期贡献参与成熟的开源项目</span></li></ul><p><span> </span></p><h2 id='成就'><span>成就</span></h2><p><span>创始人</span></p><p><span>董事局主席兼首席执行官</span></p><h2 id='公司'><span>公司</span></h2><figure><table><thead><tr><th style='text-align:left;' ><span>时间</span></th><th style='text-align:left;' ><span>公司名称</span></th><th style='text-align:left;' ><span>职位</span></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>yyyy.MM - yyyy.MM</span></td><td style='text-align:left;' ><span>XXX</span></td><td style='text-align:left;' ><span>XXX</span></td></tr></tbody></table></figure><p><span> </span></p><h2 id='项目'><span>项目</span></h2><h4 id='xxx'><span>xxx</span></h4><p><span>yyyy.MM - yyyy.MM</span><span>	</span><span>职位</span></p><p><span>介绍。。。。。。。。。。。。。</span></p><ul><li><span>XXXXXXXXX</span></li><li><span>XXXXXXXXX</span></li></ul><h2 id='评价'><span>评价</span></h2><ul><li><span>注重代码可读性/耦合度</span></li><li><span>保持高质量代码和提交记录</span></li><li><span>热爱技术和代码</span></li><li><span>熟悉团队协作</span></li><li><span>结合实际需求思考技术选型</span></li></ul><p><span> </span></p></div></div>
 </body>
 </html>
