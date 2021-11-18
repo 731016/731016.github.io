@@ -9,7 +9,7 @@
     <td><strong>涂鏊飞</strong></td>
 	<td>性别：</td>
     <td><strong>男</strong> 🚹</td>
-	<td rowspan="5"><img style="zoom: 25%;" src="https://images.gitee.com/uploads/images/2021/1118/204704_51952613_8254421.png"></td>
+	<td rowspan="5"><img style="zoom: 25%;" src="https://img-blog.csdnimg.cn/12c2e81228e14a5e993a5968f8bfc522.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5oqY6IW-55qE5bCP6aOe,size_9,color_FFFFFF,t_70,g_se,x_16"></td>
 </tr>
 <tr>
 	<td>出生年月：</td>
@@ -36,6 +36,7 @@
 	<td></td>
 </tr>
 </table>
+
 
 ## 求职意向
 
@@ -163,10 +164,10 @@
 **功能模块**:
 
  	1. 员工注册
-	2. 员工列表展示-可筛选部门
-	3. 删除单个员工，批量删除员工
-	4. 修改员工信息
-	5. 双击头像，可提交员工头像
+ 	2. 员工列表展示-可筛选部门
+ 	3. 删除单个员工，批量删除员工
+ 	4. 修改员工信息
+ 	5. 双击头像，可提交员工头像
 
 **责任描述**：
 
