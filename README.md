@@ -60,32 +60,22 @@
 
 ## 专业技能
 
-### Java
-
 + 熟练JavaSE基础知识，如数据类型、包装类型、字符串、字符串常量池。
 + 熟悉Java异常处理、常用集合。
 + 良好的面向对象编程思想，并且熟悉常用的Java设计模式（如单例、工厂）
 + 熟悉泛型、多线程的使用方式。
 + 掌握Java反射机制。
 
-### JavaWeb
-
 + 熟悉Java Web技术，包括JSP、Servlet、Filter、Cookie、Session、Request、Response、EL表达式、JSTL标签语言。
 + 掌握JDBC编程，并且能够熟练使用DBUtil开发工具包、druid数据库连接池
 
-### 前端
-
 + 掌握HTML+CSS+JS及AJAX等前台技术，能够熟练Ajax进行同步或异步数据交互。
 + 能够熟练使用jQuery、Bootstrap插件。
-
-### 框架
 
 + 熟练掌握Spring框架，包括IOC和DI、AOP编程、声明式事务处理及SSM的整合等技术。
 + 熟悉SpringMVC、MyBatis、MyBatisPlus等开源框架、深刻理解SpringMVC核心流程。
 + 掌握Hibernate、Spring Data JPA等开源框架。
 + 掌握Redis缓存，掌握jedis连接池的基本使用。
-
-### 其他
 
 + 熟悉Git、SVN版本控制工具。
 
