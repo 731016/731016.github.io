@@ -3,44 +3,46 @@
 # [<img src="https://img.shields.io/badge/CSDN%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2-%E8%A2%AB%E8%AE%BF%E9%97%AE%E9%87%8F318%2C733-informational">](https://blog.csdn.net/qq_41666142)[<img src="https://img.shields.io/github/stars/731016?style=social">](https://github.com/731016)[<img src="https://img.shields.io/badge/Gitee-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80-red">](https://gitee.com/LovelyHzz)
 
 ## 基本信息
-<table align="center">
+
+<table align="center" border="0">
 <tr>
 	<td>姓名：</td>
-    <td><strong>涂鏊飞</strong></td>
+    <td>涂鏊飞</td>
 	<td>性别：</td>
-    <td><strong>男</strong> 🚹</td>
+    <td>男 🚹</td>
 	<td rowspan="5"><img style="zoom: 25%;" src="https://img-blog.csdnimg.cn/12c2e81228e14a5e993a5968f8bfc522.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5oqY6IW-55qE5bCP6aOe,size_9,color_FFFFFF,t_70,g_se,x_16"></td>
 </tr>
 <tr>
 	<td>出生年月：</td>
-    <td><strong>2000.1.11</strong></td>
+    <td>2000.1.11</td>
 	<td>毕业院校：</td>
-    <td><strong>湖北工程学院</strong></td>
+    <td>湖北工程学院</td>
 </tr>
 <tr>
 	<td>现居地：</td>
-	<td><strong>湖北-武汉</strong></td>
+	<td>湖北-武汉</td>
 	<td>学历:</td>
-	<td><strong>本科</strong></td>
+	<td>本科</td>
 </tr>
 <tr>
 	<td>电话📞：</td>
-    <td><strong>17683866724</strong></td>
+    <td>17683866724</td>
 	<td>专业:</td>
-    <td><strong>计算机科学与技术</strong></td>
+    <td>计算机科学与技术</td>
 </tr>
 <tr>
 	<td>邮箱📫： </td>
-    <td><strong><code>tu_aofei@163.com</code></strong></td>
+    <td>tu_aofei@163.com</td>
 	<td></td>
 	<td></td>
 </tr>
 </table>
+
 ## 求职意向
 
-| 方向     | Java开发工程师 |
-| -------- | -------------- |
-| 到岗时间 | 一周以内       |
+方向：   	Java开发工程师
+
+到岗时间：    一周以内
 
 ## 专业技能
 
@@ -157,9 +159,9 @@
 
 ## 教育背景
 
-2017 - 2020	湖北大学知行学院  计算机应用技术   专科
-
 2020 - 2022    湖北工程学院     计算机科学与技术 本科
+
+2017 - 2020	湖北大学知行学院  计算机应用技术   专科
 
 
 
