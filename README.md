@@ -49,7 +49,7 @@
 + 熟练JavaSE基础知识，如数据类型、包装类型、字符串、字符串常量池。
 + 熟悉Java异常处理、常用集合。
 + 良好的面向对象编程思想，并且熟悉常用的Java设计模式（如单例、工厂）
-+ 熟悉泛型、多线程的使用方式。
++ l 熟悉泛型、熟悉创建多线程方式、掌握多线程同步的基本使用，如synchronized、volatile、ReentrantLock。
 + 掌握Java反射机制。
 
 + 熟悉Java Web技术，包括JSP、Servlet、Filter、Cookie、Session、Request、Response、EL表达式、JSTL标签语言。
@@ -91,7 +91,7 @@
 **技术描述**：
 
 1. 使用拦截器拦截指定请求，采用自定义生成Token的工具类设置md5加密的字符串，发送回前端隐藏域，防止用户多次点击表单提交按钮。
-1. 用户注册使用Ajax异步请求，判断用户名是否已被注册；密码使用Apache Commons Codec工具类加密，更安全。
+1. 用户注册使用Ajax异步请求，判断用户名是否已被注册；同步方式使用传统拼接和restFul风格方式；密码使用Apache Commons Codec工具类加密，更安全。
 1. 使用枚举类和自定义结果类设置返回状态和信息。
 1. 采用canvas动态生成验证码和正则表达式，对注册表单进行验证。
 
