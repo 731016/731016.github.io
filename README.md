@@ -1,4 +1,4 @@
-# 个人简历
+# 涂鏊飞的个人简历
 
 # [<img src="https://img.shields.io/badge/CSDN%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2-%E8%A2%AB%E8%AE%BF%E9%97%AE%E9%87%8F318%2C733-informational">](https://blog.csdn.net/qq_41666142)[<img src="https://img.shields.io/github/stars/731016?style=social">](https://github.com/731016)[<img src="https://img.shields.io/badge/Gitee-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80-red">](https://gitee.com/LovelyHzz)
 
@@ -47,16 +47,16 @@
 ## 专业技能
 
 + 熟练JavaSE基础知识，如数据类型、包装类型、字符串、字符串常量池。
-+ 熟悉Java异常处理、常用集合。
++ 熟悉Java异常处理、常用list、set、map集合。
 + 良好的面向对象编程思想，并且熟悉常用的Java设计模式（如单例、工厂）
-+ l 熟悉泛型、熟悉创建多线程方式、掌握多线程同步的基本使用，如synchronized、volatile、ReentrantLock。
++ 熟悉泛型、熟悉创建多线程方式、掌握多线程同步的基本使用，如synchronized、volatile、ReentrantLock。
 + 掌握Java反射机制。
 
 + 熟悉Java Web技术，包括JSP、Servlet、Filter、Cookie、Session、Request、Response、EL表达式、JSTL标签语言。
 + 掌握JDBC编程，并且能够熟练使用DBUtil开发工具包、druid数据库连接池
 
 + 掌握HTML+CSS+JS及AJAX等前台技术，能够熟练Ajax进行同步或异步数据交互。
-+ 能够熟练使用jQuery、Bootstrap插件。
++ 能够熟练使用jQuery、Bootstrap、axios插件。
 
 + 熟练掌握Spring框架，包括IOC和DI、AOP编程、声明式事务处理及SSM的整合等技术。
 + 熟悉SpringMVC、MyBatis、MyBatisPlus等开源框架、深刻理解SpringMVC核心流程。
