@@ -42,30 +42,24 @@
 
 方向：   	Java开发工程师
 
-到岗时间：    一周以内
+到岗时间：    两周以内
 
 ## 专业技能
 
-+ 熟练JavaSE基础知识，如数据类型、包装类型、字符串、字符串常量池、数据类型常量池。
-+ 熟悉Java异常处理、常用list、set、map集合。
++ 熟悉JavaSE基础知识，如数据类型、包装类型、字符串、字符串常量池、数据类型常量池。
++ 熟悉Java异常处理、常用集合。
 + 良好的面向对象编程思想，并且熟悉常用的Java设计模式（如单例、工厂）
-+ 熟悉泛型、熟悉创建多线程方式、掌握多线程同步的基本使用，如synchronized、volatile、ReentrantLock。
++ 熟悉泛型、熟悉创建多线程方式、掌握多线程同步的基本使用，如synchronized、ReentrantLock。
 + 掌握Java反射机制。
-
 + 熟悉Java Web技术，包括JSP、Servlet、Filter、Cookie、Session、Request、Response、EL表达式、JSTL标签语言。
 + 掌握JDBC编程，并且能够熟练使用DBUtil开发工具包、druid数据库连接池
-
-+ 掌握HTML+CSS+JS及AJAX等前台技术，能够熟练Ajax进行同步或异步数据交互。
-+ 能够熟练使用jQuery、Bootstrap、axios插件。
-
-+ 熟练掌握Spring框架，包括IOC和DI、AOP编程、声明式事务处理及SSM的整合等技术。
-+ 熟悉SpringMVC、MyBatis、MyBatisPlus等开源框架、深刻理解SpringMVC核心流程。
-+ 掌握Hibernate、Spring Data JPA等开源框架。
-+ 掌握Redis缓存，掌握jedis连接池的基本使用。
-
-+ 熟悉Git、SVN版本控制工具。
-
-## 项目经验
++ 熟练使用HTML+CSS+JS及AJAX等前台技术，能够熟练Ajax进行同步或异步数据交互。
++ 熟练使用jQuery、Bootstrap、axios插件。
++ 熟悉Spring框架，包括IOC和DI、AOP编程、声明式事务处理及SSM的整合等技术。
++ 熟悉SpringMVC、MyBatis、MyBatis-Plus等开源框架、了解SpringMVC核心流程。
++ 了解Hibernate、Spring Data JPA等开源框架。
++ 了解Redis数据库，掌握jedis连接池的基本使用。
++ 掌握Git、SVN版本控制工具。
 
 #### 项目名称：天天生鲜交易平台
 
