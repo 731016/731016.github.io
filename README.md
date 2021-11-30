@@ -58,7 +58,7 @@
 + 熟悉Spring框架，包括IOC和DI、AOP编程、声明式事务处理及SSM的整合等技术。
 + 熟悉SpringMVC、MyBatis、MyBatis-Plus等开源框架、了解SpringMVC核心流程。
 + 了解Hibernate、Spring Data JPA等开源框架。
-+ 了解 springboot 框架的基本使用。
++ 了解springboot框架的基本使用，如thymelaf模板、schediled、quartz定时任务。
 + 了解Redis数据库，掌握Jedis连接池的基本使用。
 + 掌握Git、SVN版本控制工具。
 
