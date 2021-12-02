@@ -46,21 +46,22 @@
 
 ## 专业技能
 
-+ 熟悉JavaSE基础知识，如数据类型、包装类型、字符串、字符串常量池、数据类型常量池。
-+ 熟悉Java异常处理、常用集合。
-+ 良好的面向对象编程思想，并且熟悉常用的Java设计模式（如单例、工厂）
-+ 熟悉泛型、熟悉创建多线程方式、掌握多线程同步的基本使用，如synchronized、ReentrantLock。
-+ 掌握Java反射机制。
-+ 熟悉Java Web技术，包括JSP、Servlet、Filter、Cookie、Session、Request、Response、EL表达式、JSTL标签语言。
-+ 掌握JDBC编程，并且能够熟练使用DBUtil开发工具包、druid数据库连接池
-+ 熟练使用HTML+CSS+JS及AJAX等前台技术，能够熟练Ajax进行同步或异步数据交互。
-+ 熟练使用jQuery、Bootstrap、axios插件。
-+ 熟悉Spring框架，包括IOC和DI、AOP编程、声明式事务处理及SSM的整合等技术。
-+ 熟悉SpringMVC、MyBatis、MyBatis-Plus等开源框架、了解SpringMVC核心流程。
-+ 了解Hibernate、Spring Data JPA等开源框架。
-+ 了解springboot框架的基本使用，如thymelaf模板、schediled、quartz定时任务。
-+ 了解Redis数据库，掌握Jedis连接池的基本使用。
-+ 掌握Git、SVN版本控制工具。
++ Java基础知识（数据类型、包装类型、字符串、字符串常量池、数据类型常量池）：掌握
++ Java异常处理、常用list、set、map集合：掌握
++ 常用的Java设计模式（如单例、工厂）：掌握
++ 泛型、初始化多线程方法（synchronized、ReentrantLock）：掌握
++ Java反射机制：掌握
++ JSP、Servlet、Filter、Cookie、Session、Request、Response、EL表达式、JSTL标签语言：掌握
++ JDBC编程相关技术，JDBCUtils工具类、QueryRunner、Druid数据库连接池：掌握
++ HTML + CSS + JS、jQuery、Bootstrap、及AJAX等前台技术，Ajax、axios进行同步或异步数据交互：掌握
++ SpringMVC、MyBatis、MyBatis-Plus等开源框架：掌握
++ SpringMVC核心流程：了解
++ Spring框架，包括IOC和DI、AOP编程、声明式事务处理、pagehelper分页插件等SSM的整合等技术：掌握
++ Hibernate、Spring Data JPA开源框架：了解
++ springboot轻量级框架（Thymeleaf，Quartz）：了解
++ springclond分布式框架（Eureka，Ribbon，hystrix，fegin）：了解 
++ Redis常用数据类型和jedisPool的基本使用：了解
++ Git、SVN版本控制工具：掌握
 
 #### 项目名称：天天生鲜交易平台
 
@@ -87,6 +88,8 @@
 
 1. 使用拦截器拦截指定请求，采用自定义生成Token的工具类，采用代理模式。设置md5加密的字符串，发送回前端隐藏域，防止用户多次点击表单提交按钮。
 1. 用户注册使用Ajax异步请求，判断用户名是否已被注册；同步方式使用传统拼接和restFul风格方式；密码使用Apache Commons Codec工具类加密，更安全。
+1. 下订单和减库存采用同步方法加锁 + 事务处理，防止出现数据不一致。
+1. 商品分类id采用redis缓存。
 1. 商品浏览记录使用 PageHelper 插件进行分页查询，处理数据使用 stream 流批量处理。
 1. 使用枚举类和自定义结果类设置返回状态和信息。
 1. 采用canvas动态生成验证码和正则表达式，对注册表单进行验证。
@@ -121,37 +124,6 @@
 2. 使用Druid数据库连接池维护数据库连接，使用Properties加载数据库配置文件。
 3. 使用QueryRunner和prepareStatement来防止SQl注入攻击。
 4. 使用工厂模式和反射实例化service层对象；使用工厂+ 单例模式创建Dao层对象。
-
-#### 项目名称：员工信息管理系统
-
-**团队人数**：1人
-
-**开发环境**：IDEA + Tomcat9.0 + Mysql5.7
-
-**软件架构**：传统三层架构（dao+service+web（servlet）） + MYSQL5.7 + Druid + JQuery + Jsp + EL表达式
-
-**项目描述**：该系统为员工管理，包括员工信息的增删改查，包括员工头像。
-
-**功能模块**:
-
- 1. 员工注册
- 2. 员工列表展示-可筛选部门
- 3. 删除单个员工，批量删除员工
- 4. 修改员工信息
- 5. 双击头像，可提交员工头像
-
-**责任描述**：
-
-1. 负责数据库设计，项目搭建。
-2. 负责员工信息和部门信息管理。
-
-**技术描述**：
-
-1. 使用Druid数据库连接池维护数据库连接，使用Properties加载数据库配置文件，使用QueryRunner封装返回数据，使运行更高效。
-2. 采用自定分页工具类，对员工信息进行分页查询，并对工资使用el表达式判断，展示不同的效果。
-3. 使用SmartUpload工具类上传员工头像，简化上传操作。
-4. 将文件名根据时间戳+随机数重命名后，另存为后删除源文件；当要修改头像时，获取数据库保存的文件名对其保存在数据库的文件进行删除后，重新上传。
-5. dao层和service层部分采用单例模式（懒汉式-不支持多线程）；service层部门采用工厂模式
 
 ## 教育背景
 
