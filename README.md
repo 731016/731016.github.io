@@ -54,6 +54,7 @@
 + JSP、Servlet、Filter、Cookie、Session、Request、Response、EL表达式、JSTL标签语言：掌握
 + JDBC编程相关技术，JDBCUtils工具类、QueryRunner、Druid数据库连接池：掌握
 + HTML + CSS + JS、jQuery、Bootstrap、及AJAX等前台技术，Ajax、axios进行同步或异步数据交互：掌握
++ vue前端框架：了解
 + SpringMVC、MyBatis、MyBatis-Plus等开源框架：掌握
 + SpringMVC核心流程：了解
 + Spring框架，包括IOC和DI、AOP编程、声明式事务处理、pagehelper分页插件等SSM的整合等技术：掌握
