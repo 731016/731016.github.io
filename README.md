@@ -57,7 +57,8 @@
 + vue前端框架：了解
 + SpringMVC、MyBatis、MyBatis-Plus等开源框架：掌握
 + SpringMVC核心流程：了解
-+ Spring框架，包括IOC和DI、AOP编程、声明式事务处理、pagehelper分页插件等SSM的整合等技术：掌握
++ Spring框架，包括IOC和DI、AOP编程、声明式事务处理等 SSM 的整合等技术：掌握
++ pagehelper分页插件：了解
 + Hibernate、Spring Data JPA开源框架：了解
 + springboot轻量级框架（Thymeleaf，Quartz）：了解
 + springclond分布式框架（Eureka，Ribbon，hystrix，fegin，gateway）：了解 
