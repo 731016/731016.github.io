@@ -60,7 +60,7 @@
 + Spring框架，包括IOC和DI、AOP编程、声明式事务处理、pagehelper分页插件等SSM的整合等技术：掌握
 + Hibernate、Spring Data JPA开源框架：了解
 + springboot轻量级框架（Thymeleaf，Quartz）：了解
-+ springclond分布式框架（Eureka，Ribbon，hystrix，fegin）：了解 
++ springclond分布式框架（Eureka，Ribbon，hystrix，fegin，gateway）：了解 
 + Redis常用数据类型和jedisPool的基本使用：了解
 + Git、SVN版本控制工具：掌握
 
