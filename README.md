@@ -1,6 +1,6 @@
 # 涂鏊飞的个人简历
 
-# [<img src="https://img.shields.io/badge/CSDN%E6%8A%80%E6%9C%AF%E5%8D%9A%E5%AE%A2-%E8%A2%AB%E8%AE%BF%E9%97%AE%E9%87%8F318%2C733-informational">](https://blog.csdn.net/qq_41666142)[<img src="https://img.shields.io/github/stars/731016?style=social">](https://github.com/731016)[<img src="https://img.shields.io/badge/Gitee-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80-red">](https://gitee.com/LovelyHzz)
+# [<img alt="csdn" src="https://img.shields.io/badge/csdn-845%2C893%20%E8%A2%AB%E8%AE%BF%E9%97%AE-lightgrey">](https://blog.csdn.net/qq_41666142)[<img src="https://img.shields.io/github/stars/731016?style=social">](https://github.com/731016)[<img src="https://img.shields.io/badge/Gitee-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80-red">](https://gitee.com/LovelyHzz)
 
 ## 基本信息
 
