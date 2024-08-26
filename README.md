@@ -73,35 +73,26 @@
 
 基于 spring mvc + Hibernate + redis + Kafka + Quartz + Stimulsoft报表 + kkFileView文件预览 的制造执行管理系统。
 
-工作职责
-
-+ callback，可忽略错误
-+ xml+restful接口日志
-+ 定时任务配置
++ 使用生成器模式构建复杂的报表对象，使用线程池并行查询数据，优化生成速度。
 + 状态自定义编码名称，不用在代码里写死，po转dto定义注解自动填充cnname
-+ 多线程+设计模式生成器构建复杂的报表对象
++ 使用数据库字段dataversion，实现乐观锁机制，多个用户同时更新同一条数据，如果dataversion不一致，不允许操作，保证数据一致性。
++ 多数据源实现，通过配置文件定义的不同的数据库连接信息，使用时通过标识找到对应的数据库配置信息，重新构建数据源DataSource，得到对应的SqlSessionTemplate去查询。
++ xml+restful接口日志
 + 库存减扣，事务+锁
-+ 检测信息通过串口，TCP,UDP，OPC传输到终端，处理后上传至系统
-+ 工作日历
-+ dataversion实现乐观锁
-+ 多数据源，通过注册不同的bean对应的数据库配置信息，重新构建数据源，SqlSessionTemplate
-+ ServletContextListener监听，实现自定义逻辑
++ callback，可忽略错误
++ 定时任务配置
 
 #### 武汉卷烟厂 SPC 系统
 
 基于 springboot + Kafka + Wonderware实时数据库 + websocket 的过程统计控制系统。
 
-工作职责
-
-+ kafka消息推送，使用同一个groupid保证消息不重复消费
++ kafka消息推送，使用同一个groupid保证消息不丢失
 + websocket和前端统计图连接推送数据
 + 每个采集点单独启动线程，线程使用标识，可以监控线程是否正在运行，可对线程启动和关闭
 
 #### Word 模板引擎
 
 基于 springboot + poi-tl 的Word 模板引擎,通过 Microsoft Word 模板和数据生成新的文档。
-
-工作职责
 
 + 使用自定义的对象接收接口传递的信息，通过泛型接收，解析对象类型，使用对应的模板解析
 + 文档使用base64传递
