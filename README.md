@@ -74,12 +74,15 @@
 基于 spring mvc + Hibernate + redis + Kafka + Quartz + Stimulsoft报表 + kkFileView文件预览 的制造执行管理系统。
 
 + 使用生成器模式构建复杂的报表对象，使用线程池并行查询数据，优化生成速度。
-+ 状态自定义编码名称，不用在代码里写死，po转dto定义注解自动填充cnname
++ 魔法值，可先定义好code，name和对应的属性标识，不用在代码里写死，po转dto定义注解，通过反射自动填充code对应的name
 + 使用数据库字段dataversion，实现乐观锁机制，多个用户同时更新同一条数据，如果dataversion不一致，不允许操作，保证数据一致性。
 + 多数据源实现，通过配置文件定义的不同的数据库连接信息，使用时通过标识找到对应的数据库配置信息，重新构建数据源DataSource，得到对应的SqlSessionTemplate去查询。
-+ xml+restful接口日志
++ xml和restful接口日志，使用ConcurrentLinkedQueue异步队列调度器实现请求接口处理，使用抽象类+接口实现接收接口的处理，并记录接口日志。
++ 实现针对方法的callback，配置需要执行的callback信息（忽略异常，是否异步执行），
+	同步调用：通过具体的实现类的invoke执行各自具体逻辑；
+	异步调用：通过线程池单独执行，忽略异常通过try catch处理，如果不忽略直接throw抛出。
+	需要通过统一调用方法执行service方法
 + 库存减扣，事务+锁
-+ callback，可忽略错误
 + 定时任务配置
 
 #### 武汉卷烟厂 SPC 系统
