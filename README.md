@@ -10,7 +10,7 @@
     <td>涂鏊飞</td>
 	<td>性别：</td>
     <td>男 🚹</td>
-	<td rowspan="5"><img style="zoom: 25%;" src="https://img-blog.csdnimg.cn/12c2e81228e14a5e993a5968f8bfc522.png"></td>
+	<td rowspan="5"><img style="zoom: 25%;" src="https://note-1259190304.cos.ap-chengdu.myqcloud.com/note/tuaofei_image.png"></td>
 </tr>
 <tr>
 	<td>出生年月：</td>
