@@ -10,7 +10,7 @@
     <td>涂鏊飞</td>
 	<td>性别：</td>
     <td>男 🚹</td>
-	<td rowspan="5"><img style="zoom: 25%;" src="https://img-blog.csdnimg.cn/12c2e81228e14a5e993a5968f8bfc522.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5oqY6IW-55qE5bCP6aOe,size_9,color_FFFFFF,t_70,g_se,x_16"></td>
+	<td rowspan="5"><img style="zoom: 25%;" src="https://img-blog.csdnimg.cn/12c2e81228e14a5e993a5968f8bfc522.png"></td>
 </tr>
 <tr>
 	<td>出生年月：</td>
@@ -69,7 +69,7 @@
 
 ## 项目经历
 
-#### 武汉卷烟厂 MES 系统
+#### XXX卷烟厂 MES 系统
 
 基于 spring mvc + Hibernate + redis + Kafka + Quartz + Stimulsoft报表 + kkFileView文件预览 的制造执行管理系统。
 
@@ -85,7 +85,7 @@
 + 库存减扣，事务+锁
 + 定时任务配置
 
-#### 武汉卷烟厂 SPC 系统
+#### XXX卷烟厂 SPC 系统
 
 基于 springboot + Kafka + Wonderware实时数据库 + websocket 的过程统计控制系统。
 
