@@ -1,6 +1,6 @@
 # 涂鏊飞的个人简历
 
-# [![Static Badge](https://img.shields.io/badge/CSDN-964%2C889%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F-blue)](https://blog.csdn.net/qq_41666142) [<img src="https://img.shields.io/github/stars/731016?style=social">](https://github.com/731016) [<img src="https://img.shields.io/badge/个人网站-笔记-red">](http://43.136.170.4:10081/)
+# [![Static Badge](https://img.shields.io/badge/CSDN-964%2C889%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F-blue)](https://blog.csdn.net/qq_41666142) [<img src="https://img.shields.io/github/stars/731016?style=social">](https://github.com/731016) [<img src="https://img.shields.io/badge/个人网站-笔记-red">](http://xiaofei.site/)
 
 ## 基本信息
 
@@ -73,7 +73,7 @@
 
 基于 spring mvc + Hibernate + redis + Kafka + Quartz + Stimulsoft报表 + kkFileView文件预览 的制造执行管理系统。
 
-+ 使用生成器模式构建复杂的报表对象，使用线程池并行查询数据，优化生成速度。
++ 结合Stimulsoft报表工具，使用生成器模式构建复杂的报表对象，使用线程池并行查询数据，优化生成速度。
 + 魔法值，可先定义好code，name和对应的属性标识，不用在代码里写死，po转dto定义注解，通过反射自动填充code对应的name
 + 使用数据库字段dataversion，实现乐观锁机制，多个用户同时更新同一条数据，如果dataversion不一致，不允许操作，保证数据一致性。
 + 多数据源实现，通过配置文件定义的不同的数据库连接信息，使用时通过标识找到对应的数据库配置信息，重新构建数据源DataSource，得到对应的SqlSessionTemplate去查询。
@@ -88,16 +88,16 @@
 
 基于 springboot + Kafka + Wonderware实时数据库 + websocket 的过程统计控制系统。
 
-+ kafka消息推送，使用同一个groupid保证消息不丢失
-+ websocket和前端统计图连接推送数据
++ kafka消息推送，使用多个消费者监听同一个GroudId,保证消息不丢失
++ websocket和前端控制图建立长连接,推送业务数据
 + 每个采集点单独启动线程，线程使用标识，可以监控线程是否正在运行，可对线程启动和关闭
 
 #### Word 模板引擎
 
 基于 springboot + poi-tl 的Word 模板引擎,通过 Microsoft Word 模板和数据生成新的文档。
 
-+ 使用自定义的对象接收接口传递的信息，通过泛型接收，解析对象类型，使用对应的模板解析
-+ 文档使用base64传递
++ 使用json传递需要生成的数据信息，解析对象类型，使用对应的模板解析
++ 文档数据使用base64编码传递
 
 
 ## 自我评价
