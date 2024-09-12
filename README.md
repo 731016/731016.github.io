@@ -47,7 +47,6 @@
 - 熟悉 Hibernate、Spring Data JPA 开源框架。
 - 熟悉 springboot 轻量级框架，FreeMarker 模板引擎，根据模板导出 word，excel；Quartz 定时任务，实现对服务方法的定时配置，不用在代码单独配置。
 - 熟悉 Mysql，Oracle 数据库及库表设计，能够通过创建索引、Explain 分析、SQL语句优化等方式优化性能。
-- 熟悉 常见生产环境问题：如cpu占用过高，频繁GC。
 - 熟悉 常见业务问题的解决方案：比如nginx正向/反向代理、全局跨域解决、多环境问题解决等。
 - 掌握 Git、SVN 版本控制工具，如上传、拉取代码和版本控制。
 - 掌握 常用消息队列的基本使用（Kafka）。
