@@ -40,7 +40,7 @@
 
 ## 专业技能
 
-- 熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API 操作集合类。
+- 熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。
 - 熟悉 常用的 Java 设计模式（如单例、工厂、生成器）。
 - 熟悉 HTML、JavaScript、jQuery、Vue、ajax 等前台技术，Ajax、axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，element-ui 的使用。
 - 熟悉 SSM、Spring Boot、MyBatis-Plus 等主流后端开发框架，熟悉 AOP、IOC 编程、pagehelper 分页插件，能独立开发项目。
@@ -88,7 +88,7 @@ spring + Hibernate + redis + Kafka + Quartz + Stimulsoft报表 + poi-tl文档模
 + 实现到service实现类方法的callback调用，配置需要执行的callback信息（包括忽略异常，是否异步执行），
 	同步调用：通过具体的实现类的invoke执行各自具体逻辑；
 	异步调用：通过线程池单独执行，忽略异常通过try catch处理，如果不忽略直接throw抛出。
-+ 定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行定时任务
++ 定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行定时任务,并通过分布式锁保证多机部署时定时任务不会重复执行。
 + 系统中用到的魔法值，可先定义好code，name和对应的属性标识，不用在代码里写死，po转dto定义注解，通过反射自动填充code对应的name
 + 结合Stimulsoft报表工具，使用生成器模式构建复杂的报表对象，使用线程池并行查询数据，优化生成速度。
 + 使用json传递需要生成的数据信息（如解析的对象类型、需要生成的数据、word模板），解析对象类型，使用对应的解析策略或自定义解析策略处理生成word文档。
