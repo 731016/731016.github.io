@@ -72,7 +72,7 @@
 #### XXX卷烟厂 MES 系统
 
 **软件架构**
-spring + Hibernate + redis + Kafka + Quartz + Stimulsoft报表 + poi-tl文档模板 + kkFileView文件预览
+spring + Hibernate + redis + Kafka + Quartz + Stimulsoft报表 + poi-tl文档模板
 
 **项目描述**
 用于在制造过程中监控和控制车间的生产流程的制造执行管理系统，以提高生产效率和产品质量。MES系统通过集成生产设备、收集生产数据、监控生产过程，实现了生产流程的自动化和智能化。
@@ -84,18 +84,19 @@ spring + Hibernate + redis + Kafka + Quartz + Stimulsoft报表 + poi-tl文档模
 **技术描述**
 + 多个用户操作同一数据，使用 dataVersion 实现乐观锁机制，保证数据一致性。
 + 多数据源实现，通过配置文件定义的不同的数据库连接信息，构建数据源DruidDataSource，得到对应的SqlSessionTemplate去操作对应的数据库。
-+ xml和restful接口日志，使用ConcurrentLinkedQueue异步队列实现一个调度器处理接口处理，使用抽象类+工厂模式+现场池+接口实现接收接口的处理，并记录接口日志。
++ xml和restful接口日志，使用LinkedBlockingQueue + AtomicInteger 实现一个任务调度器处理接口数据，使用抽象类+线程池+接口实现接收接口的处理，并记录接口日志。
 + 实现到service实现类方法的callback调用，配置需要执行的callback信息（包括忽略异常，是否异步执行），
 	同步调用：通过具体的实现类的invoke执行各自具体逻辑；
 	异步调用：通过线程池单独执行，忽略异常通过try catch处理，如果不忽略直接throw抛出。
-+ 定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行执行定时任务时获取锁，根据执行方法，请求req名称 + method	+时间戳对统一定时任务加锁限制，统一通过接口实现invoke方法
++ 定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行定时任务
 + 系统中用到的魔法值，可先定义好code，name和对应的属性标识，不用在代码里写死，po转dto定义注解，通过反射自动填充code对应的name
 + 结合Stimulsoft报表工具，使用生成器模式构建复杂的报表对象，使用线程池并行查询数据，优化生成速度。
++ 使用json传递需要生成的数据信息（如解析的对象类型、需要生成的数据、word模板），解析对象类型，使用对应的解析策略或自定义解析策略处理生成word文档。
 
 #### XXX卷烟厂 SPC 系统
 
 **软件架构**
-spring + redis + Kafka + Wonderware实时数据库 + websocket
+spring + redis + Kafka + Wonderware时序数据库 + websocket
 
 **项目描述**
 利用统计分析方法监控生产过程，确保产品质量的过程质量控制系统。用于实时监控生产过程中的各类与质量管控相关的数据，并在线进行统计、分析和展示，及时准确发现生产过程的异常波动，并指导生产及时采取纠正和调整措施，保障生产过程稳态。
@@ -105,24 +106,11 @@ spring + redis + Kafka + Wonderware实时数据库 + websocket
 对系统进行运维，保证系统的正常运行
 
 **技术描述**
-+ 通过Wonderware实时数据库查询数据采集信息并实时计算控制图，通过kafka、websocket推送到web端展示；页面打开后和后端建立长链接，业务数据实时推送
-+ 自定义线程+处理队列实现单个数据采集点位的数据处理，可通过线程标识控制线程启停和监控
++ plc采集的数据通过OPC服务器读取到Wonderware时序数据库。
++ 通过配置需要采集的数据信息，根据工单或批次来通过查询实时数据库来获取数据采集信息并实时计算控制图，后端通过kafka获取数据进行消费处理。
++ 实时监控页面通过websocket和后端建立长链接，后台处理完成的业务数据实时推送给web端。
++ 自定义线程+处理队列实现单个数据采集点位的数据处理，可通过线程标识控制线程启停和监控。
 
-#### Word 文档导出服务
-
-**软件架构**
-springboot + poi-tl
-
-**项目描述**
-通过 Microsoft Word 模板和数据生成文档。
-
-**责任描述**
-封装poi-tl模板引擎，可通过接口或jar包进行调用服务，和业务模块区分开
-
-**技术描述**
-+ 封装自定义的req传递需要使用的参数，如解析的对象类型、需要生成的数据、word模板
-+ 使用json传递需要生成的数据信息，解析对象类型，使用对应的解析策略或自定义解析策略处理
-+ 文档数据使用base64编码传递
 
 ## 自我评价
 
