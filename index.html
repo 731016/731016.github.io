@@ -1,13 +1,13 @@
 <!doctype html>
-<html>
+<html style='font-size:16px !important'>
 <head>
 <meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-<title>java开发工程师 涂鏊飞</title>
-<link href='https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
-.mac-os-11 { --title-bar-height:28px; }
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
 html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
-body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
 a.url { word-break: break-all; }
 a:active, a:hover { outline: 0px; }
@@ -163,7 +163,7 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .md-fences-advanced:not(.md-focus) { background: inherit; }
 .typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
 .typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
-.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
 .typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
 @media screen and (max-width: 1024px) {
   .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
@@ -203,19 +203,23 @@ mark .md-meta { color: rgb(0, 0, 0); }
 .typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
 .md-inline-math-container mjx-container { zoom: 0.95; }
 mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
 
-/*快速自定义配置*/
-:root {
-    --monospace: "JetBrains Mono", "Fira Code", "Cascadia Code", Menlo, "Ubuntu Mono", Consolas, HYZhengYuan; /*代码字体*/
-    --text-font: var(--monospace); /*正文字体*/
-    --title-font: var(--monospace); /*标题字体*/
-    --latex-font: var(--monospace); /*LaTeX字体(不含英语)*/
-    --text-line-height: 1.6; /*正文行间距*/
-    --code-line-height: 1.6; /*代码块行间距*/
-    --p-spacing: 0.8rem; /*段间距*/
-    --text-size: 12px;
-}/*
+/*
  * Copyright (C) 2018 Drake, Inc.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -229,14 +233,14 @@ mjx-container { break-inside: avoid; }
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *
- * GitHub https://github.com/liangjingkanji/DrakeTyporaTheme
  */
-@import url();
-@include-when-export url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-    --text-color: #333333;
+    --monospace: "JetBrains Mono", HYZhengYuan, "Fira Code", Menlo, "Ubuntu Mono", Consolas; /*code font*/
+    --text-font: var(--monospace); /*default font*/
+    --title-font: var(--monospace); /*title font*/
+
+    --text-color: #304455;
     --bg-color: #ffffff;
     --control-text-color: var(--text-color);
     --meta-content-color: var(--text-color);
@@ -245,18 +249,17 @@ mjx-container { break-inside: avoid; }
     --item-hover-bg-color: #E5E5E596;
     --active-file-bg-color: var(--item-hover-bg-color);
 
-    --blur-text-color: rgba(51, 51, 51, 0.5);
-    --drake-accent: #e95f59;
+    --drake-accent: #31a062;
     --drake-highlight: #d63200;
-    --a-color: var(--drake-highlight);
+    --a-color: var(--drake-accent);
     --variable-color: var(--drake-highlight);
     --outline-active-color: var(--a-color);
-    --code-block-bg-color: #2b2b2b;
-    --code-block-color: #A9B7C6;
+    --code-block-bg-color: #f8f8f8;
+    --code-block-color: #525252;
     --title-color: #273849;
-    --blockquote-border-color: var(--drake-accent);
+    --blockquote-border-color: #f66;
     --blockquote-color: var(--text-color);
-    --blockquote-bg-color: #fdefee;
+    --blockquote-bg-color: #f8f8f8;
     --strong-color: var(--title-color);
     --h2-underline-color: var(--title-color);
     --horizontal-divider-color: var(--title-color);
@@ -270,14 +273,14 @@ mjx-container { break-inside: avoid; }
     --table-header-bg-color: #f8f8f8;
     --table-bg-color: var(--bg-color);
     --table-n2-bg-color: #f8f8f8;
-    --input-bg-color: var(--item-hover-bg-color);
-    --btn-hover-bg-color: var(--item-hover-bg-color);
+    --input-bg-color: #f2f2f2;
+    --btn-hover-bg-color: #f2f2f2;
     --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
     --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23333333'/%3E%3C/svg%3E");
 }
 
 html {
-    font-size: var(--text-size);
+    font-size: 12px;
 }
 
 body {
@@ -289,14 +292,11 @@ body {
     letter-spacing: 0;
     margin: 0;
     overflow-x: hidden;
-}
-
-p {
-    line-height: var(--text-line-height);
+    line-height: 1.8rem;
 }
 
 /*code block*/
-.md-fences {
+#write .md-fences {
     font-size: 1rem;
     padding: 0.5rem !important;
     border-radius: 2px;
@@ -304,150 +304,6 @@ p {
     background-color: var(--code-block-bg-color);
     color: var(--code-block-color);
     border: none;
-    line-height: var(--code-line-height);
-}
-.on-focus-mode .CodeMirror.cm-s-inner:not(.CodeMirror-focused) *,
-.on-focus-mode .md-fences.md-focus .CodeMirror-code > :not(.CodeMirror-activeline) *,
-.on-focus-mode .md-htmlblock.md-focus .CodeMirror-code > :not(.CodeMirror-activeline) * {
-    color: #909090 !important
-}
-
-/*inline latex*/
-.MathJax {
-    font-size: 120% !important;
-}
-.MathJax text, .MathJax use {
-    font-family: var(--latex-font);
-}
-/*math-block latex*/
-.md-math-block .MathJax {
-    font-size: 130% !important;
-}
-
-/*mermaid*/
-[id^=mermaidChart] .cluster rect {
-    fill: var(--table-n2-bg-color) !important;
-    stroke: var(--table-border-color) !important;
-}
-[id^=mermaidChart] .clusters span.nodeLabel {
-    color: var(--text-color) !important;
-    line-height: 1.8rem;
-}
-[mermaid-type="journey"] line {
-    stroke: #7a7a7a !important;
-}
-[mermaid-type="journey"] .label {
-    color: #333 !important;
-}
-[id^=mermaidChart] .relationshipLabelBox {
-    fill: var(--bg-color) !important;
-    opacity: 1 !important;
-    background-color: var(--bg-color) !important;
-}
-[id^=mermaidChart] .legend {
-    fill: var(--text-color) !important;
-}
-[id^=mermaidChart] g.label {
-    font-size: 1rem !important;
-}
-[id^=mermaidChart] line.divider {
-    stroke: var(--table-border-color) !important;
-}
-[id^=mermaidChart] span.nodeLabel {
-    color: var(--code-block-color) !important;
-    line-height: 1.8rem;
-}
-tspan {
-    color: var(--text-color)
-}
-[id^=mermaidChart] .entityLabel {
-    fill: var(--code-block-color) !important;
-}
-[id^=mermaidChart] {
-    fill: var(--text-color) !important;
-}
-[id^=mermaidChart] rect.rect {
-    fill: rgba(175, 255, 212, 0.3) !important;
-}
-.md-diagram-panel-preview text.actor > tspan { /*方块文字*/
-    fill: var(--code-block-color) !important;
-    stroke: none !important;
-    font-family: var(--text-font) !important;
-    font-size: 1rem !important;
-}
-.md-diagram-panel-preview .actor, .md-diagram-panel-preview .entityBox { /*方块*/
-    stroke: var(--table-border-color) !important;
-    fill: var(--code-block-bg-color) !important;
-}
-.md-diagram-panel-preview .actor-line { /*竖线*/
-    stroke: var(--text-color) !important;
-    stroke-width: 1px;
-}
-.md-diagram-panel-preview .messageLine0 { /*横线*/
-    stroke-width: 1.5;
-    stroke-dasharray: none;
-    stroke: var(--text-color) !important;
-}
-.md-diagram-panel-preview .messageLine1 { /*虚线*/
-    stroke-width: 1.5 !important;
-    stroke-dasharray: 2, 2 !important;
-    stroke: var(--text-color) !important;
-}
-.md-diagram-panel-preview .messageText { /*描述文字*/
-    fill: var(--text-color) !important;
-    font-family: var(--text-font) !important;
-    font-size: 1rem !important;
-}
-.md-diagram-panel-preview .activation0 { /*长方形*/
-    fill: #e6e6e6 !important;
-    stroke: var(--text-color) !important;
-}
-.md-diagram-panel-preview .labelText, .md-diagram-panel-preview .labelText > tspan { /*循环标记*/
-    fill: var(--code-block-color) !important;
-    font-family: var(--text-font) !important;
-    font-size: 1rem !important;
-    dominant-baseline: unset;
-    alignment-baseline: unset;
-}
-.md-diagram-panel-preview .labelBox { /*循环标记背景*/
-    stroke: var(--table-border-color) !important;
-    fill: var(--code-block-bg-color) !important;
-}
-.md-diagram-panel-preview .loopLine { /*循环标记虚线*/
-    stroke: var(--text-color) !important;
-}
-.md-diagram-panel-preview .loopText, .md-diagram-panel-preview .loopText > tspan { /*循环名称*/
-    fill: var(--text-color) !important;
-    font-size: 1rem !important;
-}
-.md-diagram-panel-preview .sequenceNumber { /*序号*/
-    fill: var(--bg-color) !important;
-}
-pre.md-fences-advanced.md-focus .md-fences-adv-panel {
-    border: none;
-}
-.md-diagram-panel-preview .edgePath .path { /*箭头*/
-    stroke: var(--text-color) !important;
-}
-.md-diagram-panel-preview .edgeLabel rect { /*条件文字背景*/
-    fill: var(--bg-color) !important;
-}
-.md-diagram-panel-preview .edgeLabel span { /*条件文字*/
-    color: var(--text-color) !important;
-    background: var(--bg-color) !important;
-}
-.md-diagram-panel-preview .node rect,
-.md-diagram-panel-preview .node circle,
-.md-diagram-panel-preview .node ellipse,
-.md-diagram-panel-preview .node polygon,
-.md-diagram-panel-preview .node path { /*形状*/
-    stroke: var(--table-border-color) !important;
-    fill: var(--code-block-bg-color) !important;
-}
-#write .md-diagram-panel .md-diagram-panel-preview div { /*形状内文字*/
-    color: var(--code-block-color);
-    font-family: var(--text-font) !important;
-    font-size: 1rem !important;
 }
 
 /*code snippet*/
@@ -524,14 +380,7 @@ blockquote {
     color: var(--a-color);
     text-decoration: none;
 }
-#write h2 a .md-plain {
-    border-bottom: .2rem solid var(--a-color);
-}
-.on-focus-mode #write a .md-plain, .on-focus-mode .md-htmlblock-container a:hover {
-    border-bottom: .1rem solid var(--blur-text-color);
-}
-#write a .md-plain, .md-htmlblock-container a:hover,
-.on-focus-mode #write .md-focus a .md-plain, .md-focus .md-htmlblock-container a:hover {
+#write a .md-plain, .md-htmlblock-container a:hover {
     border-bottom: .1rem solid var(--a-color);
 }
 [md-inline=link] a {
@@ -555,6 +404,10 @@ img {
 }
 #typora-source .CodeMirror-lines {
     max-width: 1200px;
+}
+
+#write p {
+    word-spacing: .05rem;
 }
 
 #write > ul:first-child,
@@ -581,7 +434,6 @@ h6 {
     margin-top: 2rem;
     margin-bottom: 1rem;
     font-weight: bold;
-    line-height: 1.4;
     cursor: text;
     color: var(--title-color);
 }
@@ -591,18 +443,23 @@ h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: 1.6rem;
     text-align: center;
     margin-top: 0;
 }
 
-h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+h2.md-end-block.md-heading {
+    font-size: 1.6rem;
+    display: inline-block;
 }
 
-.on-focus-mode h2.md-end-block.md-heading:not(.md-focus):not(.md-focus-container):after {
-    background-color: var(--blur-text-color) !important;
+h2.md-end-block.md-heading:after {
+    display: block;
+    content: '';
+    height: 2px;
+    margin-top: 4px;
+    background-color: var(--h2-underline-color);
+    border-radius: 2px;
 }
 
 h3 {
@@ -660,16 +517,20 @@ h6 code {
     font-size: inherit !important;
 }
 
-p, blockquote, ul, ol, dl, table {
-    margin: var(--p-spacing) 0;
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+p {
+    margin: 0;
 }
 
 li > ol,
 li > ul {
     margin: 0 0;
-}
-li {
-    margin: 0.5em 0;
 }
 
 hr {
@@ -742,11 +603,8 @@ ol:last-child {
     margin-bottom: 0;
 }
 
-.ty-table-edit {
-    margin-top: -1rem !important;
-}
-#write table {
-    margin-top: 1rem;
+table {
+    padding: 0;
     word-break: initial;
     background-color: var(--table-bg-color);
 }
@@ -786,6 +644,10 @@ table tr td:last-child {
     padding: 0 5px 0 2px;
 }
 
+#write table thead th {
+    background-color: var(--table-header-bg-color);
+}
+
 /* height light */
 #write mark {
     border: .1em solid var(--height-light-border-color);
@@ -803,10 +665,10 @@ kbd {
     background: transparent;
     color: var(--text-color);
     margin: 0 .4rem;
-    font-family: var(--text-font) !important;
     font-size: .95rem;
     padding: .3em .4em;
     border-radius: .4em;
+    vertical-align: top;
     box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
 }
 
@@ -837,7 +699,6 @@ kbd {
 #write pre.md-meta-block {
     padding: 1rem;
     font-size: 1rem;
-    line-height: 1.45;
     background-color: var(--yaml-bg-color);
     border: 0;
     border-radius: 2px;
@@ -999,20 +860,9 @@ footer {
 .file-node-content:hover .file-node-open-state {
     visibility: visible;
 }
-.file-node-content {
-    display: flex;
-    align-items: center;
-}
-.file-node-open-state {
-    margin-right: .5rem;
-}
-.file-node-icon {
-    margin-right: .5rem;
-}
 
 #typora-sidebar {
-    font-size: inherit;
-    font-family: var(--title-font);
+    font-size: 1.1rem;
 }
 
 .sidebar-tabs {
@@ -1160,6 +1010,7 @@ div.code-tooltip-content {
     width: 1.6rem;
     margin-left: -2em;
 }
+
 #write .ul-list li.md-task-list-item.task-list-not-done::before {
     content: "";
     background: var(--checkbox-unchecked) 0 0 no-repeat;
@@ -1169,9 +1020,6 @@ div.code-tooltip-content {
     height: 1.6rem;
     width: 1.6rem;
     margin-left: -2em;
-}
-.task-list-item p {
-    line-height: 1.6rem;
 }
 
 /*insert table*/
@@ -1297,124 +1145,95 @@ a.ty-link {
 
 /**
     code render
-    Name: IntelliJ IDEA darcula theme
+    Name: IntelliJ IDEA light theme
     From IntelliJ IDEA by JetBrains
  */
-.cm-s-inner.CodeMirror {
-    background: none;
+.cm-s-inner span.cm-number {
+    color: #a32eff;
+}
+
+.cm-s-inner span.cm-atom {
+    color: #a32eff;
+}
+
+.cm-s-inner span.cm-def {
     color: var(--code-block-color);
 }
-.cm-s-inner span.cm-meta {
-    color: #BBB529;
-}
-.cm-s-inner span.cm-number {
-    color: #6897BB;
-}
-.cm-s-inner span.cm-keyword {
-    color: #CC7832;
-}
-.cm-s-inner span.cm-def {
-    color: #FFD760;
-}
+
 .cm-s-inner span.cm-variable {
     color: var(--code-block-color);
 }
+
 .cm-s-inner span.cm-variable-2 {
+    color: #00627A;
+}
+
+.cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type {
+    color: #00627A;
+}
+
+.cm-s-inner span.cm-property {
     color: var(--code-block-color);
 }
-.cm-s-inner span.cm-variable-3 {
-    color: #9876AA;
+
+.cm-s-inner span.cm-keyword {
+    color: #d63200;
 }
-.cm-s-inner span.cm-type {
-    color: #AABBCC;
-}
-.cm-s-inner span.cm-property {
-    color: #FFC66D;
-}
+
 .cm-s-inner span.cm-operator {
     color: var(--code-block-color);
 }
-.cm-s-inner span.cm-string {
-    color: #6A8759;
-}
-.cm-s-inner span.cm-string-2 {
-    color: #6A8759;
-}
+
 .cm-s-inner span.cm-comment {
     color: #787878;
 }
-.cm-s-inner span.cm-link {
-    color: #CC7832;
+
+.cm-s-inner span.cm-string {
+    color: #31a062;
 }
-.cm-s-inner span.cm-atom {
-    color: #CC7832;
+
+.cm-s-inner span.cm-string-2 {
+    color: #31a062;
 }
-.cm-s-inner span.cm-error {
-    color: #BC3F3C;
-}
-.cm-s-inner span.cm-tag {
-    color: #E8BF6A;
-}
-.cm-s-inner span.cm-quote {
-    color: #a6e22e;
-}
-.cm-s-inner span.cm-attribute {
-    color: #9876AA;
-}
+
 .cm-s-inner span.cm-qualifier {
-    color: #6A8759;
+    color: var(--code-block-color);
 }
-.cm-s-inner span.cm-bracket {
-    color: #E8BF6A;
+
+.cm-s-inner span.cm-error {
+    color: red;
 }
+
+.cm-s-inner span.cm-attribute {
+    color: #2973b7;
+}
+
+.cm-s-inner span.cm-tag {
+    color: #2973b7;
+}
+
+.cm-s-inner span.cm-link {
+    color: #4A86E8;
+}
+
 .cm-s-inner span.cm-builtin {
-    color: #FF9E59;
+    color: var(--code-block-color);
 }
-.cm-s-inner span.cm-special {
-    color: #FF9E59;
+
+.cm-s-inner span.cm-bracket {
+    color: #2973b7;
 }
-.cm-s-inner span.cm-matchhighlight {
-    color: #FFFFFF;
-    background-color: rgba(50, 89, 48, .7);
-    font-weight: normal;
-}
-.cm-s-inner span.cm-searching {
-    color: #FFFFFF;
-    background-color: rgba(61, 115, 59, .7);
-    font-weight: normal;
-}
+
 .cm-s-inner .CodeMirror-gutters {
     border-right: 1px solid rgba(120, 120, 120, 0.3);
-    background: var(--code-block-bg-color);
 }
+
 .cm-s-inner .CodeMirror-linenumber {
-    color: #585b5d;
-}
-.cm-s-inner .CodeMirror-matchingbracket {
-    background-color: #3B514D;
-    color: #FFEF28 !important;
-}
-.cm-s-inner .CodeMirror-selected {
-    background: #214283 !important;
-}
-.cm-s-inner .CodeMirror-selectedtext {
-    background: #214283 !important;
-}
-.cm-s-typora-default .CodeMirror-selectedtext {
-    background: var(--select-text-bg-color) !important;
-}
-.cm-overlay.CodeMirror-selectedtext {
-    background: var(--select-text-bg-color) !important;
-}
-.cm-s-inner div.CodeMirror-cursor {
-    border-left: 1px solid var(--code-block-color);
-}
-.cm-s-inner .cm-header, .cm-s-inner.cm-header {
-    color: #FFD760;
+    color: #787878;
 }
 
 
-</style><title>index</title>
+</style><title>README</title>
 </head>
 <body class='typora-export os-windows'><div class='typora-export-content'>
 <div id='write'  class=''><h1 id='涂鏊飞的个人简历'><span>涂鏊飞的个人简历</span></h1><h1><a href='https://blog.csdn.net/qq_41666142'><img src="https://img.shields.io/badge/CSDN-964%2C889%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F-blue" referrerpolicy="no-referrer" alt="Static Badge"></a><span> </span><a href='https://github.com/731016'><img src="https://img.shields.io/github/stars/731016?style=social"></a><span> </span><a href='http://xiaofei.site/'><img src="https://img.shields.io/badge/个人网站-笔记-red"></a></h1><h2 id='基本信息'><span>基本信息</span></h2><table align="center" border="0">
@@ -1449,11 +1268,11 @@ a.ty-link {
     <td>意向：</td>
     <td style='font-weight:800;color:rgb(196, 61, 56)'>在职-考虑机会</td>
 </tr>
-</table><h2 id='专业技能'><span>专业技能</span></h2><ul><li><p><span>熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。</span></p></li><li><p><span>熟悉 常用的 Java 设计模式（如单例、工厂、生成器）。</span></p></li><li><p><span>熟悉 HTML、JavaScript、jQuery、Vue、ajax 等前台技术，Ajax、axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，element-ui 的使用。</span></p></li><li><p><span>熟悉 SSM、Spring Boot、MyBatis-Plus 等主流后端开发框架，熟悉 AOP、IOC 编程、pagehelper 分页插件，能独立开发项目。</span></p></li><li><p><span>熟悉 Hibernate、Spring Data JPA 开源框架。</span></p></li><li><p><span>熟悉 springboot 轻量级框架，FreeMarker 模板引擎，根据模板导出 word，excel；Quartz 定时任务，实现对服务方法的定时配置，不用在代码单独配置。</span></p></li><li><p><span>熟悉 Mysql，Oracle 数据库及库表设计，能够通过创建索引、Explain 分析、SQL语句优化等方式优化性能。</span></p></li><li><p><span>熟悉 常见业务问题的解决方案：比如nginx正向/反向代理、全局跨域解决、多环境问题解决等。</span></p></li><li><p><span>掌握 Git、SVN 版本控制工具，如上传、拉取代码和版本控制。</span></p></li><li><p><span>掌握 常用消息队列的基本使用（Kafka）。</span></p></li><li><p><span>了解 Redis ，掌握 jedisPool，Redis 分布式锁，Redission分布式 session 的使用。</span></p></li><li><p><span>了解 SpringCloud 分布式框架，掌握 SpringCloud 各大组件的使用，如 Nacos 注册中心、GateWay 网关等组件。</span></p></li><li><p><span>熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。</span></p></li><li><p><span>了解 elasticsearch 搜索引擎，有开发过对文档文件进行搜索的功能。</span></p></li><li><p><span>了解 docker 容器化部署。</span></p></li></ul><h2 id='工作经历'><span>工作经历</span></h2><h4 id='上海威士顿信息科技股份有限公司武汉分公司'><span>上海威士顿信息科技股份有限公司武汉分公司</span></h4><p><span>2022.7.1 - 至今</span></p><p><span>智能制造事业部 Java/.net 开发工程师 武汉</span></p><ul><li><p><span>根据需求文档进行分析设计，完成业务功能开发、单元测试、缺陷修复和维护工作。</span></p></li><li><p><span>熟练掌握 SQL 语句，并能应用 SQL 进行增删改查业务数据操作和统计工作。</span></p></li></ul><h2 id='项目经历'><span>项目经历</span></h2><h4 id='xxx卷烟厂-mes-系统'><span>XXX卷烟厂 MES 系统</span></h4><p><strong><span>软件架构</span></strong>
+</table><h2 id='专业技能'><span>专业技能</span></h2><ul><li><p><span>熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。</span></p></li><li><p><span>熟悉 常用的 Java 设计模式（如单例、工厂、生成器）。</span></p></li><li><p><span>熟悉 HTML、JavaScript、jQuery、Vue、ajax 等前台技术，Ajax、axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，element-ui 的使用。</span></p></li><li><p><span>熟悉 SSM、Spring Boot、MyBatis-Plus 等主流后端开发框架，熟悉 AOP、IOC 编程、pagehelper 分页插件，能独立开发项目。</span></p></li><li><p><span>熟悉 Hibernate、Spring Data JPA 开源框架。</span></p></li><li><p><span>熟悉 springboot 轻量级框架，FreeMarker 模板引擎，根据模板导出 word，excel；Quartz 定时任务，实现对服务方法的定时配置，不用在代码单独配置。</span></p></li><li><p><span>熟悉 Mysql，Oracle 数据库及库表设计，能够通过创建索引、Explain 分析、SQL语句优化等方式优化性能。</span></p></li><li><p><span>熟悉 常见业务问题的解决方案：比如nginx正向/反向代理、全局跨域解决、多环境问题解决，api签名认证，springboot starter SDK等。</span></p></li><li><p><span>掌握 Git、SVN 版本控制工具，如上传、拉取代码和版本控制。</span></p></li><li><p><span>掌握 常用消息队列的基本使用（Kafka）。</span></p></li><li><p><span>了解 Redis ，掌握 jedisPool，Redis 分布式锁，Redission分布式 session 的使用。</span></p></li><li><p><span>了解 SpringCloud 分布式框架，掌握 SpringCloud 各大组件的使用，如 Nacos 注册中心、GateWay 网关等组件。</span></p></li><li><p><span>熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。</span></p></li><li><p><span>了解 elasticsearch 搜索引擎，有开发过对文档文件进行搜索的功能。</span></p></li><li><p><span>了解 docker 容器化部署。</span></p></li></ul><h2 id='工作经历'><span>工作经历</span></h2><h4 id='上海威士顿信息科技股份有限公司武汉分公司'><span>上海威士顿信息科技股份有限公司武汉分公司</span></h4><p><span>2022.7.1 - 至今</span></p><p><span>智能制造事业部 Java/.net 开发工程师 武汉</span></p><ul><li><p><span>根据需求文档进行分析设计，完成业务功能开发、单元测试、缺陷修复和维护工作。</span></p></li><li><p><span>熟练掌握 SQL 语句，并能应用 SQL 进行增删改查业务数据操作和统计工作。</span></p></li></ul><h2 id='项目经历'><span>项目经历</span></h2><h4 id='xxx卷烟厂-mes-系统'><span>XXX卷烟厂 MES 系统</span></h4><p><strong><span>软件架构</span></strong>
 <span>spring + Hibernate + redis + Kafka + Quartz + Stimulsoft报表 + poi-tl文档模板</span></p><p><strong><span>项目描述</span></strong>
 <span>用于在制造过程中监控和控制车间的生产流程的制造执行管理系统，以提高生产效率和产品质量。MES系统通过集成生产设备、收集生产数据、监控生产过程，实现了生产流程的自动化和智能化。</span></p><p><strong><span>责任描述</span></strong>
 <span>参与项目的需求分析和功能设计，确保系统功能满足生产需求。</span>
-<span>与客户保持沟通，收集反馈并持续优化系统功能。</span></p><p><strong><span>技术描述</span></strong></p><ul><li><p><span>多个用户操作同一数据，使用 dataVersion 实现乐观锁机制，保证数据一致性。</span></p></li><li><p><span>多数据源实现，通过配置文件定义的不同的数据库连接信息，构建数据源DruidDataSource，得到对应的SqlSessionTemplate去操作对应的数据库。</span></p></li><li><p><span>xml和restful接口日志，使用LinkedBlockingQueue + AtomicInteger 实现一个任务调度器处理接口数据，使用抽象类+线程池+接口实现接收接口的处理，并记录接口日志。</span></p></li><li><p><span>实现到service实现类方法的callback调用，配置需要执行的callback信息（包括忽略异常，是否异步执行），</span>
+<span>与客户保持沟通，收集反馈并持续优化系统功能。</span></p><p><strong><span>技术描述</span></strong></p><ul><li><p><span>多个用户操作同一数据，使用 dataVersion 实现乐观锁机制，保证数据一致性。</span></p></li><li><p><span>多数据源实现，通过配置文件定义的不同的数据库连接信息，构建数据源DruidDataSource，得到对应的SqlSessionTemplate去操作对应的数据库。</span></p></li><li><p><span>为防止接口被恶意调用，设计API签名认证算法，为用户分配唯一AK/SK用于鉴权，保障接口调用的安全性。</span></p></li><li><p><span>xml和restful接口日志，使用LinkedBlockingQueue + AtomicInteger 实现一个任务调度器处理接口数据，使用抽象类+线程池+接口实现接收接口的处理，并记录接口日志。</span></p></li><li><p><span>实现到service实现类方法的callback调用，配置需要执行的callback信息（包括忽略异常，是否异步执行），</span>
 <span>同步调用：通过具体的实现类的invoke执行各自具体逻辑；</span>
 <span>异步调用：通过线程池单独执行，忽略异常通过try catch处理，如果不忽略直接throw抛出。</span></p></li><li><p><span>定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行定时任务,并通过分布式锁保证多机部署时定时任务不会重复执行。</span></p></li><li><p><span>系统中用到的魔法值，可先定义好code，name和对应的属性标识，不用在代码里写死，po转dto定义注解，通过反射自动填充code对应的name</span></p></li><li><p><span>结合Stimulsoft报表工具，使用生成器模式构建复杂的报表对象，使用线程池并行查询数据，优化生成速度。</span></p></li><li><p><span>使用json传递需要生成的数据信息（如解析的对象类型、需要生成的数据、word模板），解析对象类型，使用对应的解析策略或自定义解析策略处理生成word文档。</span></p></li></ul><h4 id='xxx卷烟厂-spc-系统'><span>XXX卷烟厂 SPC 系统</span></h4><p><strong><span>软件架构</span></strong>
 <span>spring + redis + Kafka + Wonderware时序数据库 + websocket</span></p><p><strong><span>项目描述</span></strong>
