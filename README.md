@@ -47,7 +47,7 @@
 - 熟悉 Hibernate、Spring Data JPA 开源框架。
 - 熟悉 springboot 轻量级框架，FreeMarker 模板引擎，根据模板导出 word，excel；Quartz 定时任务，实现对服务方法的定时配置，不用在代码单独配置。
 - 熟悉 Mysql，Oracle 数据库及库表设计，能够通过创建索引、Explain 分析、SQL语句优化等方式优化性能。
-- 熟悉 常见业务问题的解决方案：比如nginx正向/反向代理、全局跨域解决、多环境问题解决等。
+- 熟悉 常见业务开发场景：比如nginx正向/反向代理、全局跨域解决、多环境问题解决，api签名认证，springboot starter SDK等。
 - 掌握 Git、SVN 版本控制工具，如上传、拉取代码和版本控制。
 - 掌握 常用消息队列的基本使用（Kafka）。
 - 了解 Redis ，掌握 jedisPool，Redis 分布式锁，Redission分布式 session 的使用。
@@ -84,6 +84,7 @@ spring + Hibernate + redis + Kafka + Quartz + Stimulsoft报表
 **技术描述**
 + 多个用户操作同一数据，使用 dataVersion 实现乐观锁机制，保证数据一致性。
 + 多数据源实现，通过配置文件定义的不同的数据库连接信息，构建数据源DruidDataSource，得到对应的SqlSessionTemplate去操作对应的数据库。
++ 为防止接口被恶意调用，设计API签名认证算法，为用户分配唯一AK/SK用于鉴权，保障接口调用的安全性。
 + xml和restful接口日志，使用LinkedBlockingQueue + AtomicInteger 实现一个任务调度器处理接口数据，使用抽象类+线程池+接口实现接收接口的处理，并记录接口日志。
 + 实现到service实现类方法的callback调用，配置需要执行的callback信息（包括忽略异常，是否异步执行），
 	同步调用：通过具体的实现类的invoke执行各自具体逻辑；
@@ -91,6 +92,7 @@ spring + Hibernate + redis + Kafka + Quartz + Stimulsoft报表
 + 定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行定时任务,并通过分布式锁保证多机部署时定时任务不会重复执行。
 + 系统中用到的魔法值，可先定义好code，name和对应的属性标识，不用在代码里写死，po转dto定义注解，通过反射自动填充code对应的name
 + 结合Stimulsoft报表工具，使用生成器模式构建复杂的报表对象，使用线程池并行查询数据，优化生成速度。
++ 使用json传递需要生成的数据信息（如解析的对象类型、需要生成的数据、word模板），解析对象类型，使用对应的解析策略或自定义解析策略处理生成word文档。
 
 #### XXX卷烟厂 SPC 系统
 
