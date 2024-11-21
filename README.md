@@ -93,7 +93,7 @@ spring + Hibernate + oracle + redis + Kafka + Quartz + Stimulsoft报表
   异步调用：通过线程池单独执行，忽略异常通过try catch处理，如果不忽略直接throw抛出。
 + 定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行定时任务,并通过分布式锁保证多机部署时定时任务不会重复执行。
 + 系统中用到的魔法值，可先定义好code，name和对应的属性标识，不用在代码里写死，po转dto定义注解，通过反射自动填充code对应的name
-+ 结合Stimulsoft报表工具，使用生成器模式构建复杂的报表对象，使用线程池并行查询数据，优化生成速度。
++ 结合Stimulsoft报表工具，使用生成器模式构建复杂的报表对象，使用线程池ThreadPoolExecutor并行查询数据，优化生成速度。
 
 #### XXX卷烟厂 SPC 系统
 
