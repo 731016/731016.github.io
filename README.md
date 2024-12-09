@@ -1,6 +1,6 @@
 # 涂鏊飞的个人简历
 
-# [![Static Badge](https://img.shields.io/badge/1,000,863-%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F-blue?logo=csdn)](https://blog.csdn.net/qq_41666142) [<img src="https://img.shields.io/github/stars/731016?style=social">](https://github.com/731016) [<img src="https://img.shields.io/badge/个人网站-笔记-red">](http://xiaofei.site/)
+# [![Static Badge](https://img.shields.io/badge/1,017,004-%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F-blue?logo=csdn)](https://blog.csdn.net/qq_41666142) [<img src="https://img.shields.io/github/stars/731016?style=social">](https://github.com/731016) [<img src="https://img.shields.io/badge/个人网站-笔记-red">](http://xiaofei.site/)
 
 ## 基本信息
 
@@ -42,7 +42,10 @@
 ## 专业技能
 
 - 熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。
-- 熟悉 常用的 Java 设计模式（如单例、工厂、生成器）。
+ 专业技能
+
+- 熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。
+- 熟悉 常用并实践过多种 Java 设计模式（如单例、工厂、生成器、门面、注册器、适配器）。
 - 熟悉 HTML、JavaScript、jQuery、Vue、ajax 等前台技术，Ajax、axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，element-ui 的使用。
 - 熟悉 SSM、Spring Boot、MyBatis-Plus 等主流后端开发框架，熟悉 AOP、IOC 编程、pagehelper 分页插件，能独立开发项目。
 - 熟悉 Hibernate、Spring Data JPA 开源框架。
@@ -51,11 +54,10 @@
 - 熟悉 常见业务开发场景：比如nginx正向/反向代理、全局跨域解决、多环境问题解决，api签名认证，springboot starter SDK等。
 - 掌握 Git、SVN 版本控制工具，如上传、拉取代码和版本控制。
 - 掌握 常用消息队列的基本使用（Kafka）。
+- 熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。
 - 了解 Redis ，掌握 jedisPool，Redis 分布式锁，Redission分布式 session 的使用。
 - 了解 SpringCloud 分布式框架，掌握 SpringCloud 各大组件的使用，如 Nacos 注册中心、GateWay 网关等组件。
-- 熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。
-- 了解 elasticsearch 搜索引擎，有开发过对文档文件进行搜索的功能。
-- 了解 docker 容器化部署。
+- 了解 elasticsearch 搜索引擎，能用elasticsearch实现分词搜索，使用Logstash、定时任务实现elasticsearch和数据库进行数据同步。
 
 ## 工作经历
 
@@ -84,16 +86,16 @@ spring + Hibernate + oracle + redis + Kafka + Quartz + Stimulsoft报表
 
 **技术描述**
 
-+ 多个用户操作同一数据，使用 dataVersion 实现乐观锁机制，保证数据一致性。
-+ 多数据源实现，通过配置文件定义的不同的数据库连接信息，构建数据源DruidDataSource，得到对应的SqlSessionTemplate去操作对应的数据库。
++ 防止多个用户操作同一数据造成数据不一致的问题，使用 dataVersion 实现乐观锁机制，更新数据库时对比版本，保证数据一致性。
++ 多数据源实现，通过配置文件定义的不同的数据库连接信息，构建数据源DruidDataSource，得到对应的SqlSessionTemplate去操作对应的数据库，不同业务模块使用独立数据源，降低系统耦合度。
 + 为防止接口被恶意调用，设计API签名认证算法，为用户分配唯一AK/SK用于鉴权，保障接口调用的安全性。
-+ xml和restful接口日志，使用LinkedBlockingQueue + AtomicInteger 实现一个任务调度器处理接口数据，使用抽象类+线程池+接口实现接收接口的处理，并记录接口日志。
-+ 实现到service实现类方法的callback调用，配置需要执行的callback信息（包括忽略异常，是否异步执行），
-  同步调用：通过具体的实现类的invoke执行各自具体逻辑；
-  异步调用：通过线程池单独执行，忽略异常通过try catch处理，如果不忽略直接throw抛出。
++ xml和restful接口日志，统一接收接口路径前缀，使用设计模式设计抽象类接收器，抽取公共方法，不同类型的接口具体实现不同的处理器，提升了接口的可维护性和扩展性。
++ 通过扩展 service 方法，实现可配置的 callback 机制，支持在方法执行前后动态配置和调用业务逻辑（如发送接口、消息提醒等），并可灵活设置 callback 的执行方式（同步/异步）和异常处理策略。
 + 定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行定时任务,并通过分布式锁保证多机部署时定时任务不会重复执行。
-+ 系统中用到的魔法值，可先定义好code，name和对应的属性标识，不用在代码里写死，po转dto定义注解，通过反射自动填充code对应的name
++ 系统中用到的魔法值，可维护code和name的对应关系，不用在代码里写死；自定义注解，在po实体转dto时，通过反射自动填充编码对应的名称，集中管理，提高程序的可维护性和扩展性。
 + 结合Stimulsoft报表工具，使用生成器模式构建复杂的报表对象，使用线程池ThreadPoolExecutor并行查询数据，优化生成速度。
++ 为实现可搜索上传文件内容，使用elasticsearch替代数据库的模糊搜索，使用动静分离策略创建文章索引，只在es中存储要搜索的字段、修改不频繁的字段（如文件名，文件内容、文件实体id），其它信息可关联数据库查询；
+并使用ik分词器实现更灵活的分词查询，减少es数据更新同步的成本、保证数据一致性。
 
 #### XXX卷烟厂 SPC 系统
 
@@ -109,10 +111,10 @@ spring + oracle + redis + Kafka + Wonderware时序数据库 + websocket
 
 **技术描述**
 
-+ plc采集的数据通过OPC服务器读取到Wonderware时序数据库。
-+ 通过配置需要采集的数据信息，根据工单或批次来通过查询实时数据库来获取数据采集信息并实时计算控制图，后端通过kafka获取数据进行消费处理。
-+ 实时监控页面通过websocket和后端建立长链接，后台处理完成的业务数据实时推送给web端。
-+ 自定义线程+处理队列实现单个数据采集点位的数据处理，可通过线程标识控制线程启停和监控。
++ plc采集的数据通过OPC服务器读取到Wonderware时序数据库，支持高频采集和大规模数据存储，保证数据完整性和可追溯性。
++ 通过配置需要采集的数据信息，根据工单或批次来通过查询实时数据库来获取数据采集信息并实时计算控制图，后端通过kafka获取数据进行消费处理，解决大规模实时数据的计算和处理问题，通过消息队列实现了数据处理的解耦和削峰。
++ 实时监控页面通过websocket和后端建立长链接，后台处理完成的业务数据实时推送给web端，解决了工业数据实时展示的及时性问题，提供了更好的用户体验和实时交互能力
++ 自定义线程+处理队列实现单个数据采集点位的数据处理，可通过线程标识控制线程启停和监控，解决了数据处理的并发控制，实现了采集任务的管理和监控，支持动态调整和异常处理
 
 
 
@@ -127,11 +129,9 @@ spring boot + Apache poi + poi-tl
 
 **技术描述**
 
-+ 通过接口传递需要生成的模板信息，文档以base64形式传递，生成word的参数通过json解析为实际需要的类型
-
-+ 根据每个参数对应的参数类型（如字符串，表格，列表，图表）通过匹配对应的解析策略
-
-+ 文档生成，将生成的Word文档输出，可以是直接通过application/x-download以Stream文件流形式下载
++ 通过接口传递需要生成的模板信息，文档以base64形式传递，生成word的参数通过json解析为实际需要的类型，支持多种格式的文档模板和参数类型，确保数据传输的安全性和完整性。
++ 根据每个参数对应的参数类型（如字符串，表格，列表，图表）通过匹配对应的解析策略，通过策略模式实现了不同类型参数的统一处理，支持模板的灵活扩展和自定义。
++ 文档生成，将生成的Word文档输出，可以是直接通过application/x-download以Stream文件流形式下载，解决了大文件传输和文档下载的性能问题，通过流式处理减少内存占用。
 
 
 ## 自我评价
