@@ -34,7 +34,7 @@
 	<td>邮箱📫： </td>
     <td>tu_aofei@163.com</td>
 	<td>意向：</td>
-	<td style='font-weight:800;color:rgb(196, 61, 56)'>在职-考虑机会</td>
+	<td style='font-weight:800;color:rgb(196, 61, 56)'>离职-随时入职</td>
 </tr>
 </table>
 
