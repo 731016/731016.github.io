@@ -24,13 +24,8 @@
 	<td>邮箱📫：</td>
     <td>tu_aofei@163.com</td>
 </tr>
-<tr>
-    <td>意向：</td>
-	<td style='font-weight:800;color:rgb(196, 61, 56)'>离职-随时入职</td>
-	<td></td>
-    <td></td>
-</tr>
 </table>
+
 
 ## 教育经历
 
@@ -41,20 +36,17 @@
 ## 专业技能
 
 - 熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。
- 专业技能
-
-- 熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。
 - 熟悉 常用并实践过多种 Java 设计模式（如单例、工厂、生成器、门面、注册器、适配器）。
 - 熟悉 HTML、JavaScript、jQuery、Vue、ajax 等前台技术，Ajax、axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，element-ui 的使用。
-- 熟悉 SSM、Spring Boot、MyBatis-Plus 等主流后端开发框架，熟悉 AOP、IOC 编程、pagehelper 分页插件，能独立开发项目。
+- 熟悉 Spring MVC、Spring Boot、MyBatis-Plus 等主流后端开发框架，熟悉 AOP、IOC 编程、pagehelper 分页插件，能独立开发项目。
 - 熟悉 Hibernate、Spring Data JPA 开源框架。
-- 熟悉 springboot 轻量级框架，FreeMarker 模板引擎，根据模板导出 word，excel；Quartz 定时任务，实现对服务方法的定时配置，不用在代码单独配置。
+- 熟悉 Quartz 作业调度框架。
 - 熟悉 Mysql，Oracle 数据库及库表设计，能够通过创建索引、Explain 分析、SQL语句优化等方式优化性能。
-- 熟悉 常见业务开发场景：比如nginx正向/反向代理、全局跨域解决、多环境问题解决，api签名认证，springboot starter SDK等。
-- 掌握 Git、SVN 版本控制工具，如上传、拉取代码和版本控制。
+- 熟悉 常见业务开发场景：比如nginx反向代理、全局跨域解决、多环境问题解决，api签名认证，springboot starter SDK等。
+- 掌握 Git、SVN 版本控制工具。
 - 掌握 常用消息队列的基本使用（Kafka）。
 - 熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。
-- 了解 Redis ，掌握 jedisPool，Redis 分布式锁，Redission分布式 session 的使用。
+- 熟悉 Redis ，掌握 Redission 分布式锁，分布式session 的使用。
 - 了解 SpringCloud 分布式框架，掌握 SpringCloud 各大组件的使用，如 Nacos 注册中心、GateWay 网关等组件。
 - 了解 elasticsearch 搜索引擎，能用elasticsearch实现分词搜索，使用Logstash、定时任务实现elasticsearch和数据库进行数据同步。
 
@@ -64,7 +56,7 @@
 
 2022.7.1 - 2024.12.20
 
-智能制造事业部 Java/.net 开发工程师 武汉
+智能制造事业部 Java开发工程师 武汉
 
 
 
@@ -81,7 +73,7 @@
 #### 武汉卷烟厂 MES 系统
 
 **软件架构**
-spring + Hibernate + oracle + redis + Kafka + Quartz + Stimulsoft报表
+spring + Hibernate + oracle + mybatis + redis + Kafka + Quartz + Stimulsoft报表
 
 **项目描述**
 用于在制造过程中监控和控制车间的生产流程的制造执行管理系统，以提高生产效率和产品质量。MES系统通过集成生产设备、收集生产数据、监控生产过程，实现了生产流程的自动化和智能化。
@@ -96,7 +88,7 @@ spring + Hibernate + oracle + redis + Kafka + Quartz + Stimulsoft报表
 **技术描述**
 
 + 防止多个用户操作同一数据造成数据不一致的问题，使用 dataVersion 实现乐观锁机制，更新数据库时对比版本，保证数据一致性。
-+ 多数据源实现，通过配置文件定义的不同的数据库连接信息，构建数据源DruidDataSource，得到对应的SqlSessionTemplate去操作对应的数据库，不同业务模块使用独立数据源，降低系统耦合度。
++ 多数据源实现，通过实现spring AbstractRoutingDataSource，不同业务模块使用独立数据源，降低系统耦合度。
 + xml和restful接口日志，统一接收接口路径前缀，使用设计模式设计抽象类接收器，抽取公共方法，不同类型的接口具体实现不同的处理器，提升了接口的可维护性和扩展性，防止接口失败可以重放请求，重新发送或接收。
 + 通过扩展 service 方法，实现可配置的 callback 机制，支持在方法执行前后动态配置和调用业务逻辑（如发送接口、消息提醒等），并可灵活设置 callback 的执行方式（同步/异步）和异常处理策略，降低系统耦合度，提升了程序可扩展性。
 + 定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行定时任务,并通过分布式锁保证多机部署时定时任务不会重复执行。
