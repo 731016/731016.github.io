@@ -37,18 +37,17 @@
 
 - 熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。
 - 熟悉 常用并实践过多种 Java 设计模式（如单例、工厂、生成器、门面、注册器、适配器）。
-- 熟悉 HTML、JavaScript、jQuery、Vue、ajax 等前台技术，Ajax、axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，element-ui 的使用。
-- 熟悉 Spring MVC、Spring Boot、MyBatis-Plus 等主流后端开发框架，熟悉 AOP、IOC 编程、pagehelper 分页插件，能独立开发项目。
-- 熟悉 Hibernate、Spring Data JPA 开源框架。
+- 熟悉 HTML、JavaScript、jQuery、Vue、Ajax等前台技术，Ajax、axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，element-ui 的使用。
+- 熟悉 Spring MVC、Spring Boot、MyBatis、Hibernate 等主流后端开发框架，熟悉 AOP、IOC 编程、PageHelper 分页插件，能独立开发项目。
+- 熟悉 Redis ，掌握 Redission 分布式锁，分布式session 的使用。
 - 熟悉 Quartz 作业调度框架。
 - 熟悉 Mysql，Oracle 数据库及库表设计，能够通过创建索引、Explain 分析、SQL语句优化等方式优化性能。
 - 熟悉 常见业务开发场景：比如nginx反向代理、全局跨域解决、多环境问题解决，api签名认证，springboot starter SDK等。
+- 熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。
 - 掌握 Git、SVN 版本控制工具。
 - 掌握 常用消息队列的基本使用（Kafka）。
-- 熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。
-- 熟悉 Redis ，掌握 Redission 分布式锁，分布式session 的使用。
-- 了解 SpringCloud 分布式框架，掌握 SpringCloud 各大组件的使用，如 Nacos 注册中心、GateWay 网关等组件。
-- 了解 elasticsearch 搜索引擎，能用elasticsearch实现分词搜索，使用Logstash、定时任务实现elasticsearch和数据库进行数据同步。
+- 了解 Spring Cloud、Dubbo 和 ZooKeeper 等分布式技术。熟悉各大组件的使用，如ZooKeeper注册中心，Dubbo远程服务调用、Gateway网关。
+- 了解 ElasticSearch 搜索引擎，能用ElasticSearch实现分词搜索，使用Logstash、定时任务实现ElasticSearch和数据库进行数据同步。
 
 ## 工作经历
 
