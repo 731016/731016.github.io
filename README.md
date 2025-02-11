@@ -118,7 +118,7 @@ spring + oracle + redis + Kafka + Wonderware时序数据库 + websocket
 #### **武汉卷烟厂智能安防平台**
 
 **软件架构**
-spring boot + Feigin + nacos + redis + oracle + Hibernate + mybatis + apache poi
+spring boot + Spring Cloud Gateway + Feigin + nacos + redis + oracle + Hibernate + mybatis + apache poi
 
 **项目描述**
 
@@ -131,34 +131,20 @@ spring boot + Feigin + nacos + redis + oracle + Hibernate + mybatis + apache poi
 
 开发设备管理模块，实现设备状态监控和远程控制
 
-优化系统性能，提升系统并发处理能力
-
 **技术描述**
 
 + 接收海康报警信息采用设计模式订阅-消费模式、模板方法模式和LinkedBlockingQueue阻塞队列实现事件调度，可灵活扩展接入不同类型的报警信息，提高程序可扩展性。
 
-+ 基于海康openapi实现监控点实时监控，通过视频流地址动态获取和用户鉴权实现各个监控点位的实时监控。
++ 基于海康OpenApi实现监控点实时监控，通过视频流地址动态获取和用户鉴权实现各个监控点位的实时监控。
 
 + 基于责任链模式的规则匹配，对各个场景如重点人员识别、离岗检测、玩手机等场景根据不同的报警规则进行插件化的动作处理机制，支持规则热更新。
 
-+ 线程池管理优化并发处理，对数据量大的报警信息表等采用分表处理，优化数据查询速度。
++ 对数据量大的报警信息，采用线程池管理优化并发处理或分表处理，优化数据查询速度。
 
-#### API接口开放平台
++ 开发报警信息接口模块，设计API签名认证算法，为用户分配唯一AK/SK用于鉴权，保障接口调用的安全性。
 
-**软件架构**
-spring boot + Dubbo + Spring Cloud Gateway
-
-**项目描述**
-
-基于 Vue + Spring Boot + Dubbo + Gateway 的 API 接口开放调用平台。管理员可以接入并发布接口，可视化各接口调用情况；用户可以开通接口调用权限、浏览接口及在线调试，并通过客户端 SDK 轻松调用接口。
-
-**技术描述**
-
-+ 基于 MyBatis Plus 框架的 QueryWrapper 实现对 MySQL 数据库的灵活查询，并配合 MyBatis X 插件自动生成后端 CRUD 基础代码，减少重复工作。
-
-+ 为防止接口被恶意调用，设计API签名认证算法，为用户分配唯一AK/SK用于鉴权，保障接口调用的安全性。
-+ 前后端使用 Swagger + Knife4j 自动生成 OpenAPI 规范的接口文档，前端在此基础上使用插件自动生成接口请求代码，降低前后端协作成本。
 + 为解决开发者调用成本过高的问题，基于 Spring Boot Starter 开发了客户端 SDK， 一行代码 即可调用接口，提高开发体验。
+
 + 选用 Spring Cloud Gateway 作为 API 网关，实现了路由转发、访问控制、流量染色，并集中处理签名校验、请求参数校验、接口调用统计等业务逻辑，提高安全性的同时、便于系统开发维护。
 
 
