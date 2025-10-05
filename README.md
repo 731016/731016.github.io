@@ -47,8 +47,12 @@
 - 熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。
 - 掌握 Git、SVN 版本控制工具。
 - 掌握 常用消息队列的基本使用（Kafka）。
+- 了解 Docker容器化技术，能够编写Dockerfile将应用打包成镜像，确保环境一致性和部署效率。
 - 了解 Spring Cloud、Dubbo 和 ZooKeeper 等分布式技术。熟悉各大组件的使用，如ZooKeeper注册中心，Dubbo远程服务调用、Gateway网关。
 - 了解 ElasticSearch 搜索引擎，能用ElasticSearch实现分词搜索，使用Logstash、定时任务实现ElasticSearch和数据库进行数据同步。
+- 了解 RAG知识库构建，能基于SpringAI实现文档收集、向量转换与存储、文档检索和查询增强的完整流程。
+- 了解 PGvector向量数据库的使用，结合SpringAI的VectorStore实现AI知识库管理和RAG智能检索。
+- 了解 响应式编程，能使用WebFlux实现非阻塞式异步操作，提高系统并发处理能力。
 
 ## 工作经历
 
@@ -146,6 +150,32 @@ SpringBoot + Spring Cloud Gateway + Feigin + Nacos + Redis + Oracle + Hibernate 
 + 为解决开发者调用成本过高的问题，基于 Spring Boot Starter 开发了客户端 SDK， 一行代码 即可调用接口，提高开发体验。
 
 + 选用 Spring Cloud Gateway 作为 API 网关，实现了路由转发、访问控制、流量染色，并集中处理签名校验、请求参数校验、接口调用统计等业务逻辑，提高安全性的同时、便于系统开发维护。
+
+#### AI后端开发知识智能体
+
+**软件架构**
+SpringBoot + SpringAI + RAG + Tool Calling + MCP
+
+**项目描述**
+
+知识智能体，为用户提供后端开发帮助。支持多轮对话、记忆持久化、RAG知识库检索等能力，能够自主思考并调用工具开完成复杂任务。
+
+**技术描述**
+
++ Prompt工程优化，运用角色定义、Few-shot等技巧优化提示词，并通过反复测试，提高模型回答的准确性。
+
++ AI多轮对话，通过SpringAI的MessageChatMemoryAdvisor和ChatMemory特性实现对话上下文记忆功能，使AI能在多轮对话中保持语境连贯。
+
++ Re-Reading Advisor开发，通过实现CallAroundAdvisor接口，让模型重复阅读输入，提高处理复杂问题的准确性。
+
++ RAG 文档处理，使用MarkdownDocumentReader对知识库文档进行读取和切片处理，并通过KeywordMetadataEnricher自动提取关键元信息以支持精确检索。
++ RAG 向量存储，自定义VectorStore实现，结合EmbeddingModel将文本转换为语义向量并存储到PGvector向量数据库，支持语义相似度搜索和多维度过滤，提高了检索精准度。
++ RAG 文档检索，基于RetrievalAugmentationAdvisor组合了文档检索器和查询转换器，通过配置相似度阈值和元信息过滤策略，优化AI回复的准确性与相关性。
++ ETL数据处理，基于SpringAI实现对知识文档的完整ETL数据处理流程，使用DocumentReader、DocumentTransformer、DocummentWriter实现知识文档的抽取、转换和加载，提高了知识库构建效率。
++ AI工具调用，利用SpringAI的工具调用注解实现多种工具调用功能，包括文件操作、联网搜索、网页抓取、终端操作、资源下载和PDF生成，扩展了AI的能力边界。
++ AI流式接口，使用SseEmitter实现了SSE流式响应接口，并通过CompletableFuture将AI任务异步化，避免阻塞主线程，提升用户体验。
+
+
 
 
 ## 自我评价
