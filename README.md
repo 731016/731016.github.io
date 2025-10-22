@@ -1,6 +1,6 @@
 # 涂鏊飞的个人简历
 
-# [![Static Badge](https://img.shields.io/badge/1,017,004-%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F-blue?logo=csdn)](https://blog.csdn.net/qq_41666142) [<img src="https://img.shields.io/github/stars/731016?style=social">](https://github.com/731016) [<img src="https://img.shields.io/badge/个人网站-笔记-red">](http://xiaofei.site/)
+# [![Static Badge](https://img.shields.io/badge/1,044,342-%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F-blue?logo=csdn)](https://blog.csdn.net/qq_41666142) [<img src="https://img.shields.io/github/stars/731016?style=social">](https://github.com/731016) [<img src="https://img.shields.io/badge/个人网站-笔记-red">](http://xiaofei.site/)
 
 ## 个人信息
 
@@ -47,10 +47,28 @@
 - 熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。
 - 掌握 Git、SVN 版本控制工具。
 - 掌握 常用消息队列的基本使用（Kafka）。
+- 了解 Docker容器化技术，能够编写Dockerfile将应用打包成镜像，确保环境一致性和部署效率。
 - 了解 Spring Cloud、Dubbo 和 ZooKeeper 等分布式技术。熟悉各大组件的使用，如ZooKeeper注册中心，Dubbo远程服务调用、Gateway网关。
 - 了解 ElasticSearch 搜索引擎，能用ElasticSearch实现分词搜索，使用Logstash、定时任务实现ElasticSearch和数据库进行数据同步。
+- 了解 RAG知识库构建，能基于SpringAI实现文档收集、向量转换与存储、文档检索和查询增强的完整流程。
+- 了解 PGvector向量数据库的使用，结合SpringAI的VectorStore实现AI知识库管理和RAG智能检索。
+- 了解 响应式编程，能使用WebFlux实现非阻塞式异步操作，提高系统并发处理能力。
 
 ## 工作经历
+
+
+
+#### 北京嘉禾云网科技有限公司
+
+2022.04.20 - 至今
+
+Java开发工程师 武汉
+
+负责军工行业离散制造MES系统的开发与维护工作，重点负责工时管理、质量管理等核心模块的设计与实现。
+
+深入对接客户需求，进行需求分析与整理，编写详细开发文档，确保系统功能与业务需求高度匹配。
+
+参与系统功能优化与迭代升级，持续提升系统稳定性和性能，保障生产管理流程的高效运行。
 
 #### 上海威士顿信息科技股份有限公司
 
@@ -73,7 +91,7 @@
 #### 武汉卷烟厂 MES 系统
 
 **软件架构**
-spring + Hibernate + oracle + mybatis + redis + Kafka + Quartz + Stimulsoft报表
+Spring + Hibernate + Oracle + Mybatis + Redis + Kafka + Websocket + Quartz + StimulSoft报表
 
 **项目描述**
 用于在制造过程中监控和控制车间的生产流程的制造执行管理系统，以提高生产效率和产品质量。MES系统通过集成生产设备、收集生产数据、监控生产过程，实现了生产流程的自动化和智能化。
@@ -97,21 +115,6 @@ spring + Hibernate + oracle + mybatis + redis + Kafka + Quartz + Stimulsoft报�
 + 为实现可搜索上传文件内容，使用elasticsearch替代数据库的模糊搜索，使用动静分离策略创建文章索引，只在es中存储要搜索的字段、修改不频繁的字段（如文件名，文件内容、文件实体id），其它信息可关联数据库查询；
   并使用ik分词器实现更灵活的分词查询，减少es数据更新同步的成本、保证数据一致性，相比于传统模糊搜索搜索效率提升70%以上。
 + 通过TCP,UDP,OPC,串口等通信协议实现和车间质量检测设备对接，实现检测数据采集，自动上传至MES质量检测工单，减少人员手工录入数据操作，提高工作效率。
-
-#### 武汉卷烟厂 SPC 系统
-
-**软件架构**
-spring + oracle + redis + Kafka + Wonderware时序数据库 + websocket
-
-**项目描述**
-利用统计分析方法监控生产过程，确保产品质量的过程质量控制系统。用于实时监控生产过程中的各类与质量管控相关的数据，并在线进行统计、分析和展示，及时准确发现生产过程的异常波动，并指导生产及时采取纠正和调整措施，保障生产过程稳态。
-
-**责任描述**
-根据需求文档，对系统进行优化和开发
-对系统进行运维，保证系统的正常运行
-
-**技术描述**
-
 + 通过配置需要采集的数据信息，根据工单或批次来通过查询实时数据库来获取数据采集信息并实时计算控制图，后端通过kafka获取数据进行消费处理，解决大规模实时数据的计算和处理问题，通过消息队列实现了数据处理的解耦和削峰，缓解了高并发情况下的系统资源短缺问题。
 + 实时监控页面通过websocket和后端建立长链接，后台处理完成的业务数据实时推送给web端，解决了生产数据实时展示的及时性问题，提供了更好的用户体验和实时交互能力。
 + 自定义线程+处理队列实现单个数据采集点位的数据处理，可通过线程标识控制线程启停和监控，解决了数据处理的并发控制，实现了采集任务的管理和监控，支持动态调整和异常处理，实现对单个数采点的管控。
@@ -119,7 +122,7 @@ spring + oracle + redis + Kafka + Wonderware时序数据库 + websocket
 #### **武汉卷烟厂智能安防平台**
 
 **软件架构**
-spring boot + Spring Cloud Gateway + Feigin + nacos + redis + oracle + Hibernate + mybatis + apache poi
+SpringBoot + Spring Cloud Gateway + Feigin + Nacos + Redis + Oracle + Hibernate + Mybatis + ApachePoi
 
 **项目描述**
 
@@ -147,6 +150,8 @@ spring boot + Spring Cloud Gateway + Feigin + nacos + redis + oracle + Hibernate
 + 为解决开发者调用成本过高的问题，基于 Spring Boot Starter 开发了客户端 SDK， 一行代码 即可调用接口，提高开发体验。
 
 + 选用 Spring Cloud Gateway 作为 API 网关，实现了路由转发、访问控制、流量染色，并集中处理签名校验、请求参数校验、接口调用统计等业务逻辑，提高安全性的同时、便于系统开发维护。
+
+
 
 
 ## 自我评价
