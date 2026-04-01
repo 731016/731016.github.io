@@ -43,7 +43,7 @@
 - 熟悉 Redis ，掌握 Redission 分布式锁，分布式Session 的使用。
 - 熟悉 Quartz 作业调度框架。
 - 熟悉 Mysql，Oracle 数据库及库表设计，能够通过创建索引、Explain 分析、SQL语句优化等方式优化性能。
-- 熟悉 常见业务开发场景：比如nginx反向代理、全局跨域解决、多环境问题解决，api签名认证，SpringBoot Starter SDK等。
+- 熟悉 常见业务开发场景：比如Nginx反向代理、全局跨域解决、多环境问题解决，Api签名认证，SpringBoot Starter SDK等。
 - 熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。
 - 熟悉炎黄低代码BPM平台的使用，如存储模型、表单模型、流程模型等配置。
 - 掌握 Git、SVN 版本控制工具。
