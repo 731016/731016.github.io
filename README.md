@@ -37,6 +37,7 @@
 ## 专业技能
 
 - 熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。
+- 熟悉 Java 主流类库的使用，如Apache commons lang3工具类，Jsoup网页解析等，提高项目开发效率。
 - 熟悉 常用并实践过多种 Java 设计模式（如单例、工厂、生成器、门面、注册器、适配器）。
 - 熟悉 HTML、JavaScript、jQuery、Vue、Ajax等前台技术，Ajax、axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，element-ui 的使用。
 - 熟悉 Spring MVC、Spring Boot、MyBatis、Hibernate 等主流后端开发框架，熟悉 AOP、IOC 编程、PageHelper 分页插件，能独立开发项目。
@@ -46,7 +47,7 @@
 - 熟悉 常见业务开发场景：比如Nginx反向代理、全局跨域解决、多环境问题解决，Api签名认证，SpringBoot Starter SDK等。
 - 熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。
 - 熟悉炎黄低代码BPM平台的使用，如存储模型、表单模型、流程模型等配置。
-- 掌握 Git、SVN 版本控制工具。
+- 掌握 Git/SVN版本控制、Maven构建和项目管理、Swagger/Knife4j API文档 等工具。
 - 掌握 常用消息队列的基本使用（Kafka）。
 - 了解 Docker容器化技术，能够编写Dockerfile将应用打包成镜像，确保环境一致性和部署效率。
 - 了解 Spring Cloud 等分布式技术。熟悉各大组件的使用，如Nacos注册中心，Dubbo/OpenFeign远程服务调用、Gateway网关、负载均衡LoadBalancer、熔断限流Sentinel。
