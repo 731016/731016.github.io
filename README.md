@@ -92,6 +92,20 @@ Java开发工程师 武汉
 
 ## 项目经历
 
+#### ERP协同生产管理系统
+
+**软件架构**
+Spring Boot + Feigin + Nacos + Redis + Oracle + MybatisPlus + Ireport报表 + Apache Poi生成Office文档 + Websocket + Quartz
+
+**项目描述**
+xxx。
+
+**责任描述**
+主要参与采购、生产执行等关键业务流程的开发和运维。
+
+**技术描述**
+xxx。
+
 #### 武汉卷烟厂 MES 系统
 
 **软件架构**
