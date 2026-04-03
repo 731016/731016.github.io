@@ -39,7 +39,7 @@
 - 熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。
 - 熟悉 Java 主流类库的使用，如Apache commons lang3工具类，Jsoup网页解析等，提高项目开发效率。
 - 熟悉 常用并实践过多种 Java 设计模式（如单例、工厂、生成器、门面、注册器、适配器）。
-- 熟悉 HTML、JavaScript、jQuery、Vue、Ajax等前台技术，Ajax、axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，element-ui 的使用。
+- 熟悉 HTML、JavaScript、jQuery、Vue、React、Ajax等前台技术，Ajax、Axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，Element-Ui,Ant Design Vue，Ant Design Pro 的使用。
 - 熟悉 Spring MVC、Spring Boot、MyBatis、Hibernate 等主流后端开发框架，熟悉 AOP、IOC 编程、PageHelper 分页插件，能独立开发项目。
 - 熟悉 Redis ，掌握 Redission 分布式锁，分布式Session 的使用。
 - 熟悉 Quartz 作业调度框架。
@@ -52,6 +52,9 @@
 - 了解 Docker容器化技术，能够编写Dockerfile将应用打包成镜像，确保环境一致性和部署效率。
 - 了解 Spring Cloud 等分布式技术。熟悉各大组件的使用，如Nacos注册中心，Dubbo/OpenFeign远程服务调用、Gateway网关、负载均衡LoadBalancer、熔断限流Sentinel。
 - 了解 ElasticSearch 搜索引擎，能用ElasticSearch实现分词搜索，使用Logstash、定时任务实现ElasticSearch和数据库进行数据同步。
+- 了解 RAG知识库构建，能基于SpringAI实现文档收集、向量转换与存储、文档检索和查询增强的完整流程。
+- 了解 PGvector向量数据库的使用，结合SpringAI的VectorStore实现AI知识库管理和RAG智能检索。
+- 了解 响应式编程，能使用WebFlux实现非阻塞式异步操作，提高系统并发处理能力。
 
 ## 工作经历
 
