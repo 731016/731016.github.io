@@ -1,14 +1,1247 @@
 <!doctype html>
-<html>
+<html style='font-size:16px !important'>
 <head>
 <title>Java开发工程师 涂鏊飞</title>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'><style type='text/css'>html {overflow-x: initial !important;}</style>
+<style type='text/css'  id="style-base">:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI Emoji", "SF Pro", sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p *, #write.first-line-indent svg * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
+#write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; }
+.nodeLabel p { padding-right: 2px; padding-left: 2px; }
+.typora-export .nodeLabel p { padding-right: 0px; padding-left: 0px; }
+foreignobject { overflow: visible; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+li p { orphans: 1; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.mermaid-svg { margin: auto; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+</style>
+<style type='text/css'  id="style-theme_css">/*
+ * Copyright (C) 2018 Drake, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+:root {
+    --monospace: "JetBrains Mono", HYZhengYuan, "Fira Code", Menlo, "Ubuntu Mono", Consolas; /*code font*/
+    --text-font: var(--monospace); /*default font*/
+    --title-font: var(--monospace); /*title font*/
+
+    --text-color: #304455;
+    --bg-color: #ffffff;
+    --control-text-color: var(--text-color);
+    --meta-content-color: var(--text-color);
+    --active-file-border-color: var(--drake-accent);
+    --rawblock-edit-panel-bd: var(--code-block-bg-color);
+    --item-hover-bg-color: #E5E5E596;
+    --active-file-bg-color: var(--item-hover-bg-color);
+
+    --drake-accent: #31a062;
+    --drake-highlight: #d63200;
+    --a-color: var(--drake-accent);
+    --variable-color: var(--drake-highlight);
+    --outline-active-color: var(--a-color);
+    --code-block-bg-color: #f8f8f8;
+    --code-block-color: #525252;
+    --title-color: #273849;
+    --blockquote-border-color: #f66;
+    --blockquote-color: var(--text-color);
+    --blockquote-bg-color: #f8f8f8;
+    --strong-color: var(--title-color);
+    --h2-underline-color: var(--title-color);
+    --horizontal-divider-color: var(--title-color);
+    --height-light-color: var(--drake-highlight);
+    --height-light-border-color: var(--drake-highlight);
+    --yaml-color: #777777;
+    --yaml-bg-color: #f7f7f7;
+    --footnotes-bg-color: #3c3d3e;
+    --footnotes-highlight: #FFD760;
+    --table-border-color: #dfe2e5;
+    --table-header-bg-color: #f8f8f8;
+    --table-bg-color: var(--bg-color);
+    --table-n2-bg-color: #f8f8f8;
+    --input-bg-color: #f2f2f2;
+    --btn-hover-bg-color: #f2f2f2;
+    --checkbox-checked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M425.984 726.016l384-384-59.99-61.995-324.01 324.011-152.021-152.021L213.973 512zm384-598.016q36.01 0 61.013 25.984T896 213.974v596.01q0 34.005-25.003 59.99t-61.013 25.983h-596.01q-36.011 0-61.014-25.984t-25.003-59.989v-596.01q0-34.006 25.003-59.99T213.973 128h596.011z' fill='%2365b73b'/%3E%3C/svg%3E");
+    --checkbox-unchecked: url("data:image/svg+xml,%3Csvg class='icon' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M810.667 213.333v597.334H213.333V213.333h597.334m0-85.333H213.333C166.4 128 128 166.4 128 213.333v597.334C128 857.6 166.4 896 213.333 896h597.334C857.6 896 896 857.6 896 810.667V213.333C896 166.4 857.6 128 810.667 128z' fill='%23333333'/%3E%3C/svg%3E");
+}
+
+html {
+    font-size: 12px;
+}
+
+body {
+    font-family: var(--text-font) !important;
+    color: var(--text-color);
+    -webkit-font-feature-settings: "liga" on, "calt" on;
+    -webkit-font-smoothing: subpixel-antialiased;
+    text-rendering: optimizeLegibility;
+    letter-spacing: 0;
+    margin: 0;
+    overflow-x: hidden;
+    line-height: 1.8rem;
+}
+
+/*code block*/
+#write .md-fences {
+    font-size: 1rem;
+    padding: 0.5rem !important;
+    border-radius: 2px;
+    word-wrap: normal;
+    background-color: var(--code-block-bg-color);
+    color: var(--code-block-color);
+    border: none;
+}
+
+/*code snippet*/
+#write code, tt {
+    margin: 0 2px;
+    color: var(--drake-highlight);
+}
+
+/*variable*/
+var {
+    color: var(--variable-color);
+    font-weight: bold;
+}
+
+/*raw block*/
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    border-radius: 2px 0 2px 2px;
+    padding: 0.2rem !important;
+}
+.md-rawblock:hover > .md-rawblock-container {
+    background: none;
+}
+.md-rawblock-input {
+    font-size: 1rem;
+}
+.md-rawblock-tooltip-btn:hover {
+    background: none;
+}
+.md-rawblock:hover > .md-rawblock-tooltip {
+    border-radius: 2px 2px 0 0;
+    margin-bottom: 2px !important;
+}
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 2px 2px 0 0;
+    color: var(--code-block-color);
+}
+.md-rawblock-tooltip-name {
+    color: var(--code-block-color);
+    opacity: 1;
+}
+
+/*quote block*/
+blockquote:before {
+    display: block;
+    position: absolute;
+    content: '';
+    width: 4px;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: var(--blockquote-border-color);
+    border-radius: 2px;
+}
+
+blockquote {
+    color: var(--blockquote-color);
+    border-radius: 2px;
+    padding: 10px 16px;
+    background-color: var(--blockquote-bg-color);
+    position: relative;
+    border-left: none;
+}
+
+#write strong {
+    color: var(--strong-color);
+    font-weight: bold;
+}
+#write blockquote strong {
+    color: var(--blockquote-color);
+}
+
+/*link*/
+#write a {
+    color: var(--a-color);
+    text-decoration: none;
+}
+#write a .md-plain, .md-htmlblock-container a:hover {
+    border-bottom: .1rem solid var(--a-color);
+}
+[md-inline=link] a {
+    margin: 0 .2rem;
+}
+a:any-link {
+    color: var(--a-color);
+}
+
+img {
+    border-left: none;
+    border-right: none;
+    vertical-align: baseline;
+    border-radius: 2px;
+}
+
+#write {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px 30px 100px;
+}
+#typora-source .CodeMirror-lines {
+    max-width: 1200px;
+}
+
+#write p {
+    word-spacing: .05rem;
+}
+
+#write > ul:first-child,
+#write > ol:first-child {
+    margin-top: 30px;
+}
+
+body > *:first-child {
+    margin-top: 0 !important;
+}
+
+body > *:last-child {
+    margin-bottom: 0 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--title-font);
+    position: relative;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    cursor: text;
+    color: var(--title-color);
+}
+
+h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
+    visibility: hidden;
+}
+
+h1 {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 0;
+}
+
+h2.md-end-block.md-heading {
+    font-size: 1.6rem;
+    display: inline-block;
+}
+
+h2.md-end-block.md-heading:after {
+    display: block;
+    content: '';
+    height: 2px;
+    margin-top: 4px;
+    background-color: var(--h2-underline-color);
+    border-radius: 2px;
+}
+
+h3 {
+    font-size: 1.4rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+
+h1 tt,
+h1 code {
+    font-size: inherit !important;
+}
+
+h2 tt,
+h2 code {
+    font-size: inherit !important;
+}
+
+h3 tt,
+h3 code {
+    font-size: inherit !important;
+}
+
+h4 tt,
+h4 code {
+    font-size: inherit !important;
+}
+
+h5 tt,
+h5 code {
+    font-size: inherit !important;
+}
+
+h6 tt,
+h6 code {
+    font-size: inherit !important;
+}
+
+blockquote,
+ul,
+ol,
+dl,
+table {
+    margin: 0.8em 0;
+}
+p {
+    margin: 0;
+}
+
+li > ol,
+li > ul {
+    margin: 0 0;
+}
+
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: var(--horizontal-divider-color);
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+body > h2:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+body > h3:first-child,
+body > h4:first-child,
+body > h5:first-child,
+body > h6:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+a:first-child h1,
+a:first-child h2,
+a:first-child h3,
+a:first-child h4,
+a:first-child h5,
+a:first-child h6 {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+h1 p,
+h2 p,
+h3 p,
+h4 p,
+h5 p,
+h6 p {
+    margin-top: 0;
+}
+
+li p.first {
+    display: inline-block;
+}
+
+ul, ol {
+    padding-inline-start: 2em;
+}
+
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+
+table {
+    padding: 0;
+    word-break: initial;
+    background-color: var(--table-bg-color);
+}
+table tr {
+    border-top: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 0;
+}
+table th {
+    font-weight: bold;
+    border: .1em solid var(--table-border-color);
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: .1em solid var(--table-border-color);
+    margin: 0;
+    padding: 6px 13px;
+}
+table thead {
+    background-color: var(--table-header-bg-color);
+}
+table tr:nth-child(2n) {
+    background-color: var(--table-n2-bg-color);
+}
+table tr th:first-child,
+table tr td:first-child {
+    margin-top: 0;
+}
+table tr th:last-child,
+table tr td:last-child {
+    margin-bottom: 0;
+}
+
+#write em {
+    padding: 0 5px 0 2px;
+}
+
+#write table thead th {
+    background-color: var(--table-header-bg-color);
+}
+
+/* height light */
+#write mark {
+    border: .1em solid var(--height-light-border-color);
+    color: var(--height-light-color);
+    background-color: transparent;
+    padding: .1rem .5rem;
+    border-radius: 2rem;
+    margin: 0 .2rem;
+    font-size: .95rem;
+}
+
+/*shortcut*/
+kbd {
+    border: .1em solid #5b5b5e;
+    background: transparent;
+    color: var(--text-color);
+    margin: 0 .4rem;
+    font-size: .95rem;
+    padding: .3em .4em;
+    border-radius: .4em;
+    vertical-align: top;
+    box-shadow: .1em .1em .2em rgba(0, 0, 0, 0.3);
+}
+
+#write del {
+    padding: 1px 2px;
+}
+
+.md-task-list-item > input {
+    margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 12px;
+    }
+
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+/*YAML*/
+#write pre.md-meta-block {
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: var(--yaml-bg-color);
+    border: 0;
+    border-radius: 2px;
+    color: var(--yaml-color);
+    margin-top: 0 !important;
+}
+
+.mathjax-block > .code-tooltip {
+    bottom: .375rem;
+}
+
+#write > h3.md-focus:before {
+    left: -1.5625rem;
+    top: .375rem;
+}
+
+#write > h4.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h5.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+#write > h6.md-focus:before {
+    left: -1.5625rem;
+    top: .285714286rem;
+}
+
+.md-image > .md-meta {
+    border-radius: 2px;
+    font-family: initial;
+    padding: 2px 0 0 4px;
+    color: inherit;
+}
+
+.md-tag {
+    color: inherit;
+}
+
+.md-toc {
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.typora-quick-open-item {
+    font-size: 1rem !important;
+    height: 50px;
+    padding-left: 8px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+#typora-quick-open {
+    box-shadow: 0 0 8px #00000045;
+    padding: 0;
+}
+
+.ty-quick-open-category.ty-has-prev .ty-quick-open-category-title {
+    border-top: none;
+}
+
+#typora-quick-open-input {
+    margin: 8px;
+    box-shadow: none;
+    border-radius: 2px;
+}
+
+#typora-quick-open-input input {
+    font-size: 1rem;
+    box-shadow: none;
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 32px;
+    max-height: 32px;
+    border: none;
+}
+
+.modal-dialog#typora-quick-open {
+    border-radius: 8px;
+}
+
+.ty-quick-open-category-title {
+    padding-left: 8px;
+    color: #BEBEBE;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+}
+
+.typora-quick-open-item-path {
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+}
+
+/*search input*/
+.form-control {
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+}
+
+#md-searchpanel .btn {
+    border-radius: 2px;
+}
+
+#search-panel-replaceall-btn {
+    padding-right: 5px !important;
+    text-align: center !important;
+}
+
+#search-panel-replace-btn {
+    text-align: center !important;
+}
+
+#md-searchpanel input {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+.searchpanel-search-option-btn {
+    border-radius: 2px;
+    border: none;
+    background: transparent;
+    color: var(--text-color);
+}
+
+.searchpanel-search-option-btn.active {
+    background: var(--text-color);
+    color: var(--bg-color);
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+#md-notification:before {
+    top: 10px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header,
+.context-menu,
+.megamenu-content,
+footer {
+    font-family: initial;
+}
+
+/*sidebar*/
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state {
+    visibility: visible;
+}
+
+#typora-sidebar {
+    font-size: 1.1rem;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+.file-list-item-summary, .file-list-item-parent-loc, .file-list-item-time, .file-list-item-summary {
+    font-size: 0.9rem !important;
+    font-family: var(--text-font);
+}
+
+.file-list-item-file-ext-part {
+    display: none;
+}
+
+.outline-item {
+    font-size: 1rem;
+}
+
+/*footnotes mark*/
+#write .md-footnote {
+    background-color: inherit;
+    color: var(--drake-highlight);
+    font-size: 0.9rem;
+    border-radius: 0.9rem;
+    padding-left: 0;
+}
+
+#write .md-footnote:before {
+    content: "[";
+}
+
+#write .md-footnote:after {
+    content: "]";
+}
+
+/*footnotes content*/
+.md-hover-tip .code-tooltip-content {
+    border-radius: 2px;
+}
+
+/*footnotes title*/
+span.md-def-name {
+    padding-right: 3ch;
+    padding-left: 0;
+    position: relative;
+    font-weight: normal;
+}
+
+/*footnotes desc*/
+.footnotes {
+    font-size: 1rem;
+    font-weight: normal;
+    color: var(--text-color);
+    position: relative;
+}
+
+/*footnotes tooltip text*/
+.code-tooltip-content .md-plain {
+    font-size: 0.9rem;
+    font-family: inherit;
+}
+
+.code-tooltip-content code {
+    padding: 0 2px;
+    font-family: inherit;
+    color: var(--footnotes-highlight);
+    background-color: inherit;
+}
+
+.code-tooltip-content a {
+    color: var(--footnotes-highlight);
+}
+
+div.code-tooltip-content {
+    box-shadow: 0 0 8px #00000045;
+    background: var(--footnotes-bg-color);
+}
+
+.footnotes {
+    opacity: 1;
+}
+
+.md-def-name:after {
+    content: ". ^";
+    color: var(--text-color);
+}
+
+.md-def-footnote .md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-def-name:before {
+    content: "";
+    color: var(--text-color);
+    position: absolute;
+}
+
+.md-content.md-url, .md-def-content.md-def-url.md-auto-disp {
+    text-decoration: none;
+    border-bottom: .1rem solid var(--text-color);
+}
+
+.CodeMirror-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.file-list-item-summary {
+    font-size: 1em;
+}
+
+.pin-outline #outline-content .outline-active strong, .pin-outline .outline-active {
+    font-weight: 500;
+    color: var(--outline-active-color);
+}
+
+.file-list-item.active {
+    border-left: 4px solid var(--drake-accent);
+}
+
+#md-searchpanel .btn:not(.close-btn):hover {
+    box-shadow: none;
+    background: var(--btn-hover-bg-color);
+}
+
+/*checkbox*/
+#write input[type=checkbox] {
+    opacity: 0;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+    margin-top: 0;
+    top: 0;
+}
+
+#write .ul-list li.md-task-list-item.task-list-done::before {
+    content: "";
+    background: var(--checkbox-checked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+
+#write .ul-list li.md-task-list-item.task-list-not-done::before {
+    content: "";
+    background: var(--checkbox-unchecked) 0 0 no-repeat;
+    background-size: 100%;
+    display: inline-block;
+    position: absolute;
+    height: 1.6rem;
+    width: 1.6rem;
+    margin-left: -2em;
+}
+
+/*insert table*/
+.btn {
+    border-radius: 2px;
+}
+
+.modal-content {
+    border-radius: 8px;
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--drake-highlight);
+}
+
+.btn-primary {
+    background-color: transparent;
+    color: var(--drake-highlight);
+}
+
+.btn-default {
+    background-color: transparent;
+}
+
+.btn:active {
+    box-shadow: none;
+    border-color: transparent;
+}
+
+.modal-footer {
+    border-top: none;
+}
+
+#table-insert-col, #table-insert-row {
+    background: var(--input-bg-color);
+    border-radius: 2px;
+}
+
+/*preference panel*/
+#megamenu-content {
+    background-image: none !important;
+    background-color: var(--bg-color);
+}
+#top-titlebar {
+    height: inherit;
+    background-color: var(--bg-color);
+}
+#megamenu-menu-sidebar {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+.long-btn {
+    width: inherit;
+    min-width: 300px;
+    border: 1px solid var(--text-color);
+    border-radius: 6px;
+}
+.megamenu-menu-panel h1 {
+    margin-bottom: 3rem;
+    text-align: left;
+}
+.megamenu-menu-panel h1, .megamenu-menu-panel h2 {
+    font-weight: normal;
+}
+#recent-file-panel-search-input {
+    height: 45px;
+    border: none;
+    border-bottom: 1px solid var(--text-color);
+    padding-left: 8px;
+}
+#recent-file-panel-search-input::placeholder {
+    color: var(--text-color);
+    opacity: .5;
+}
+.megamenu-menu-header {
+    border-bottom: none;
+}
+#recent-file-panel-action-btn {
+    background: none;
+    border: none;
+}
+#recent-file-panel-action-btn-container {
+    float: none;
+    display: inline-block;
+}
+#top-titlebar .toolbar-icon.btn.hover, #top-titlebar .toolbar-icon.btn:hover {
+    background-color: var(--btn-hover-bg-color);
+    color: var(--text-color);
+}
+.megamenu-menu-panel .btn:hover {
+    background-color: var(--btn-hover-bg-color) !important;
+    color: var(--text-color);
+}
+#recent-file-panel tbody tr:nth-child(2n-1),
+.megamenu-menu-panel table thead,
+.megamenu-menu-panel table tr {
+    background-color: transparent;
+}
+.megamenu-menu-panel table {
+    font-weight: normal;
+}
+#megamenu-back-btn {
+    color: var(--text-color);
+    border: 1px solid var(--text-color);
+}
+.megamenu-menu-header #megamenu-menu-header-title {
+    color: var(--text-color);
+}
+header, .context-menu, .megamenu-content, footer {
+    font-family: var(--text-font);
+}
+.ty-preferences select {
+    padding-left: 2px;
+}
+.preference-item-hint {
+    font-size: 14px;
+}
+a.ty-link {
+    color: var(--a-color);
+    margin: 0 .2rem;
+}
+
+/**
+    code render
+    Name: IntelliJ IDEA light theme
+    From IntelliJ IDEA by JetBrains
+ */
+.cm-s-inner span.cm-number {
+    color: #a32eff;
+}
+
+.cm-s-inner span.cm-atom {
+    color: #a32eff;
+}
+
+.cm-s-inner span.cm-def {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-variable {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-variable-2 {
+    color: #00627A;
+}
+
+.cm-s-inner span.cm-variable-3, .cm-s-inner span.cm-type {
+    color: #00627A;
+}
+
+.cm-s-inner span.cm-property {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-keyword {
+    color: #d63200;
+}
+
+.cm-s-inner span.cm-operator {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-comment {
+    color: #787878;
+}
+
+.cm-s-inner span.cm-string {
+    color: #31a062;
+}
+
+.cm-s-inner span.cm-string-2 {
+    color: #31a062;
+}
+
+.cm-s-inner span.cm-qualifier {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-error {
+    color: red;
+}
+
+.cm-s-inner span.cm-attribute {
+    color: #2973b7;
+}
+
+.cm-s-inner span.cm-tag {
+    color: #2973b7;
+}
+
+.cm-s-inner span.cm-link {
+    color: #4A86E8;
+}
+
+.cm-s-inner span.cm-builtin {
+    color: var(--code-block-color);
+}
+
+.cm-s-inner span.cm-bracket {
+    color: #2973b7;
+}
+
+.cm-s-inner .CodeMirror-gutters {
+    border-right: 1px solid rgba(120, 120, 120, 0.3);
+}
+
+.cm-s-inner .CodeMirror-linenumber {
+    color: #787878;
+}</style>
+<style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
+
 <title>README</title>
 </head>
-<body><h1 id='涂鏊飞的个人简历'>涂鏊飞的个人简历</h1>
-<h1><a href='https://blog.csdn.net/qq_41666142'><img src="https://img.shields.io/badge/1,044,342-%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F-blue?logo=csdn" alt="Static Badge"></a> <a href='https://github.com/731016'><img src="https://img.shields.io/github/stars/731016?style=social"></a> <a href='http://xiaofei.site/'><img src="https://img.shields.io/badge/个人网站-笔记-red"></a></h1>
-<h2 id='个人信息'>个人信息</h2>
-<table align="center" border="0">
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='涂鏊飞的个人简历'><span>涂鏊飞的个人简历</span></h1><h1><a href='https://blog.csdn.net/qq_41666142'><img src="https://img.shields.io/badge/1,044,342-%E6%80%BB%E8%AE%BF%E9%97%AE%E9%87%8F-blue?logo=csdn" alt="Static Badge"></a><span> </span><a href='https://github.com/731016'><img src="https://img.shields.io/github/stars/731016?style=social"></a><span> </span><a href='http://xiaofei.site/'><img src="https://img.shields.io/badge/个人网站-笔记-red"></a></h1><h2 id='个人信息'><span>个人信息</span></h2><table align="center" border="0">
 <tr>
 	<td>姓名：</td>
     <td>涂鏊飞</td>
@@ -28,120 +1261,10 @@
 	<td>邮箱📫：</td>
     <td>tu_aofei@163.com</td>
 </tr>
-</table>
-<h2 id='教育经历'>教育经历</h2>
-<p><strong>湖北工程学院</strong> 计算机科学与技术 本科
-全日制 计算机学院 孝感</p>
-<h2 id='专业技能'>专业技能</h2>
-<ul>
-<li>熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。</li>
-<li>熟悉 Java 主流类库的使用，如Apache commons lang3工具类，Jsoup网页解析等，提高项目开发效率。</li>
-<li>熟悉 常用并实践过多种 Java 设计模式（如单例、工厂、生成器、门面、注册器、适配器）。</li>
-<li>熟悉 HTML、JavaScript、jQuery、Vue、React、Ajax等前台技术，Ajax、Axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，Element-Ui,Ant Design Vue，Ant Design Pro 的使用。</li>
-<li>熟悉 Spring MVC、Spring Boot、MyBatis、Hibernate 等主流后端开发框架，熟悉 AOP、IOC 编程、PageHelper 分页插件，能独立开发项目。</li>
-<li>熟悉 Redis ，掌握 Redission 分布式锁，分布式Session 的使用。</li>
-<li>熟悉 Quartz 作业调度框架。</li>
-<li>熟悉 Mysql，Oracle 数据库及库表设计，能够通过创建索引、Explain 分析、SQL语句优化等方式优化性能。</li>
-<li>熟悉 常见业务开发场景：比如Nginx反向代理、全局跨域解决、多环境问题解决，Api签名认证，SpringBoot Starter SDK等。</li>
-<li>熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。</li>
-<li>熟悉炎黄低代码BPM平台的使用，如存储模型、表单模型、流程模型等配置。</li>
-<li>掌握 Git/SVN版本控制、Maven构建和项目管理、Swagger/Knife4j API文档 等工具。</li>
-<li>掌握 常用消息队列的基本使用（Kafka）。</li>
-<li>了解 Docker容器化技术，能够编写Dockerfile将应用打包成镜像，确保环境一致性和部署效率。</li>
-<li>了解 Spring Cloud 等分布式技术。熟悉各大组件的使用，如Nacos注册中心，Dubbo/OpenFeign远程服务调用、Gateway网关、负载均衡LoadBalancer、熔断限流Sentinel。</li>
-<li>了解 ElasticSearch 搜索引擎，能用ElasticSearch实现分词搜索，使用Logstash、定时任务实现ElasticSearch和数据库进行数据同步。</li>
-<li>了解 RAG知识库构建，能基于SpringAI实现文档收集、向量转换与存储、文档检索和查询增强的完整流程。</li>
-<li>了解 PGvector向量数据库的使用，结合SpringAI的VectorStore实现AI知识库管理和RAG智能检索。</li>
-<li>了解 响应式编程，能使用WebFlux实现非阻塞式异步操作，提高系统并发处理能力。</li>
-
-</ul>
-<h2 id='工作经历'>工作经历</h2>
-<h4 id='北京嘉禾云网科技有限公司'>北京嘉禾云网科技有限公司</h4>
-<p>2025.04.20 - 至今
-Java开发工程师 武汉</p>
-<p>负责军工行业离散制造装配行业MES、ERP系统和的开发与维护工作，重点负责工时管理、质量管理、采购管理、库存管理等核心模块的设计与实现。</p>
-<p>深入对接客户需求，进行需求分析与整理，编写详细开发文档，确保系统功能与业务需求高度匹配。</p>
-<p>参与系统功能优化与迭代升级，持续提升系统稳定性和性能，保障生产管理流程的高效运行。</p>
-<h4 id='上海威士顿信息科技股份有限公司'>上海威士顿信息科技股份有限公司</h4>
-<p>2021.12.01 - 2024.12.20
-智能制造事业部 Java开发工程师 武汉</p>
-<p>负责制造执行系统（MES）的开发与维护，专注于生产消耗、库存和质量管控等关键业务流程。</p>
-<p>负责统计过程控制（SPC）的开发与维护，监控生产过程中的质量参数，实现实时质量控制。</p>
-<p>负责厂区智能安防项目的开发与维护，主要对接海康威视平台，实现门禁控制、防区报警和入侵检测等功能。</p>
-<p>根据需求文档进行分析设计，完成业务功能开发、单元测试、缺陷修复和维护工作。</p>
-<h2 id='项目经历'>项目经历</h2>
-<h4 id='erp-协同生产管理系统'>ERP 协同生产管理系统</h4>
-<p><strong>软件架构</strong></p>
-<p>Spring Boot + Feigin + Nacos + Redis + Oracle + MybatisPlus + Ireport报表 + Apache Poi生成Office文档 + Websocket + Quartz</p>
-<p><strong>项目描述</strong></p>
-<p>ERP系统覆盖销售、计划、采购、生产、库存、财务六大模块，以MRP计划引擎驱动产销协同，实现从订单到交付、从采购到结算的全流程数字化管理。</p>
-<p><strong>责任描述</strong></p>
-<p>主要参与MRP计划、采购到检验、生产执行等关键业务流程的开发、实施和运维。</p>
-<p>参与项目的需求分析和功能设计，确保系统功能满足需求。</p>
-<p>与客户保持沟通，收集反馈并持续优化系统功能。</p>
-<p><strong>技术描述</strong></p>
-<ul>
-<li>MRP核心算法实现：设计基于BOM多级展开与提前期倒排的物料需求计算引擎，采用递归算法解析产品结构，结合Oracle存储过程处理复杂净需求运算，支撑物料高频计划运算。</li>
-<li>数据一致性保障：针对库存扣减、工单领料等并发操作，采用Redis分布式锁机制，防止重复扣料，保证数据准确性。</li>
-<li>针对ERP系统高频业务场景（如MRP运算、库存实时查询），基于Feign实现服务间调用熔断降级策略。配置Hystrix/Sentinel熔断规则，当下游服务（如库存中心、采购中心）响应超时或异常时，自动触发降级逻辑，返回兜底数据或缓存结果，避免级联故障，保障核心业务流程连续性。</li>
-<li>针对生产质量检验场景复杂表单需求，集成帆软FineReport报表工具。通过拖拽式设计复杂填报模板，支持检验数据批量录入、自动计算合格率、异常数据高亮预警，替代传统Excel手工填报，提升质量数据采集效率与准确性。</li>
-
-</ul>
-<h4 id='武汉卷烟厂-mes-系统'>武汉卷烟厂 MES 系统</h4>
-<p><strong>软件架构</strong></p>
-<p>Spring + Hibernate + Oracle + Mybatis + Redis + Kafka + Websocket + Quartz + StimulSoft报表</p>
-<p><strong>项目描述</strong></p>
-<p>用于在制造过程中监控和控制车间的生产流程的制造执行管理系统，以提高生产效率和产品质量。MES系统通过集成生产设备、收集生产数据、监控生产过程，实现了生产流程的自动化和智能化。</p>
-<p><strong>责任描述</strong></p>
-<p>主要参与生产消耗、库存和质量管控等关键业务流程的开发和运维。</p>
-<p>参与项目的需求分析和功能设计，确保系统功能满足生产需求。</p>
-<p>与客户保持沟通，收集反馈并持续优化系统功能。</p>
-<p><strong>技术描述</strong></p>
-<ul>
-<li>防止多个用户操作同一数据造成数据不一致的问题，使用 dataVersion 实现乐观锁机制，更新数据库时对比版本，保证数据一致性。</li>
-<li>多数据源实现，通过实现Spring AbstractRoutingDataSource，不同业务模块使用独立数据源，降低系统耦合度。</li>
-<li>Webservice和Restful接口日志，统一接收接口路径前缀，使用设计模式设计抽象类接收器，抽取公共方法，不同类型的接口具体实现不同的处理器，提升了接口的可维护性和扩展性，防止接口失败可以重放请求，重新发送或接收。</li>
-<li>通过扩展 service 方法，实现可配置的 callback 机制，支持在方法执行前后动态配置和调用业务逻辑（如发送接口、消息提醒等），并可灵活设置 callback 的执行方式（同步/异步）和异常处理策略，降低系统耦合度，提升了程序可扩展性。</li>
-<li>定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行定时任务,并通过分布式锁保证多机部署时定时任务不会重复执行。</li>
-<li>系统中用到的魔法值，可维护code和name的对应关系，不用在代码里写死；自定义注解，在po实体转dto时，通过反射自动填充编码对应的名称，集中管理，提高程序的可维护性和扩展性，提高了接近1倍的开发效率。</li>
-<li>结合Stimulsoft报表工具，使用生成器模式构建复杂的报表对象，使用线程池ThreadPoolExecutor并行查询数据，优化生成速度，生成速度提升了30%以上。</li>
-<li>为实现可搜索上传文件内容，使用elasticsearch替代数据库的模糊搜索，使用动静分离策略创建文章索引，只在es中存储要搜索的字段、修改不频繁的字段（如文件名，文件内容、文件实体id），其它信息可关联数据库查询；
-并使用ik分词器实现更灵活的分词查询，减少es数据更新同步的成本、保证数据一致性，相比于传统模糊搜索搜索效率提升70%以上。</li>
-<li>通过TCP,UDP,OPC,串口等通信协议实现和车间质量检测设备对接，实现检测数据采集，自动上传至MES质量检测工单，减少人员手工录入数据操作，提高工作效率。</li>
-<li>通过配置需要采集的数据信息，根据工单或批次来通过查询实时数据库来获取数据采集信息并实时计算控制图，后端通过kafka获取数据进行消费处理，解决大规模实时数据的计算和处理问题，通过消息队列实现了数据处理的解耦和削峰，缓解了高并发情况下的系统资源短缺问题。</li>
-<li>实时监控页面通过Websocket和后端建立长链接，后台处理完成的业务数据实时推送给web端，解决了生产数据实时展示的及时性问题，提供了更好的用户体验和实时交互能力。</li>
-<li>自定义线程+处理队列实现单个数据采集点位的数据处理，可通过线程标识控制线程启停和监控，解决了数据处理的并发控制，实现了采集任务的管理和监控，支持动态调整和异常处理，实现对单个数采点的管控。</li>
-
-</ul>
-<h4 id='武汉卷烟厂智能安防平台'><strong>武汉卷烟厂智能安防平台</strong></h4>
-<p><strong>软件架构</strong></p>
-<p>SpringBoot + Spring Cloud Gateway + Feigin + Nacos + Redis + Oracle + Hibernate + Mybatis + ApachePoi</p>
-<p><strong>项目描述</strong></p>
-<p>基于海康威视设备的智能安防管理平台，实现报警信息实时接收、智能分级、自动处置等功能。采用微服务架构，支持百万级报警数据处理。</p>
-<p><strong>责任描述</strong></p>
-<p>负责报警信息接收模块开发，实现毫秒级报警数据接入和处理</p>
-<p>设计并实现规则引擎，支持灵活配置报警规则、多级报警分发和升级和联动策略</p>
-<p>开发设备管理模块，实现设备状态监控和远程控制</p>
-<p><strong>技术描述</strong></p>
-<ul>
-<li>接收海康报警信息采用设计模式订阅-消费模式、模板方法模式和LinkedBlockingQueue阻塞队列实现事件调度，可灵活扩展接入不同类型的报警信息，提高程序可扩展性。</li>
-<li>基于海康OpenApi实现监控点实时监控，通过视频流地址动态获取和用户鉴权实现各个监控点位的实时监控。</li>
-<li>基于责任链模式的规则匹配，对各个场景如温度报警、重点人员识别、离岗检测、玩手机等场景根据不同的报警规则进行插件化的动作处理机制，支持规则热更新。</li>
-<li>对数据量大的报警信息，采用线程池管理优化并发处理或分表处理，优化数据查询速度。</li>
-<li>开发报警信息接口模块，设计API签名认证算法，为用户分配唯一AK/SK用于鉴权，保障接口调用的安全性。</li>
-<li>为解决开发者调用成本过高的问题，基于 Spring Boot Starter 开发了客户端 SDK， 一行代码 即可调用接口，提高开发体验。</li>
-<li>选用 Spring Cloud Gateway 作为 API 网关，实现了路由转发、访问控制、流量染色，并集中处理签名校验、请求参数校验、接口调用统计等业务逻辑，提高安全性的同时、便于系统开发维护。</li>
-
-</ul>
-<h2 id='自我评价'>自我评价</h2>
-<ul>
-<li>注重代码可读性，可维护性。</li>
-<li>喜欢写技术博客，介绍自己在日常编写代码时遇到的问题，善于帮助他人。</li>
-<li>良好的学习能力，对学习有一份执着与恒心，敢于尝试新鲜事物，并从中提升自己。</li>
-<li>有较强的问的解决的能力，能够利用GitHub Issues区、AI工具、搜索引擎、StackOverflow等自主解决问题。</li>
-<li>具有较强的团队精神，有强烈的集体荣誉感。</li>
-<li>喜欢钻研新技术，敢于面对和克服困难。</li>
-
-</ul>
+</table><h2 id='教育经历'><span>教育经历</span></h2><p><strong><span>湖北工程学院</span></strong><span> 计算机科学与技术 本科</span>
+<span>全日制 计算机学院 孝感</span></p><h2 id='专业技能'><span>专业技能</span></h2><ul><li><p><span>熟悉 Java 基础知识，如基本数据类型、异常处理、集合、多线程等，能使用 Java8 的 Stream API、Lambda表达式操作集合类。</span></p></li><li><p><span>熟悉 Java 主流类库的使用，如Apache commons lang3工具类，Jsoup网页解析等，提高项目开发效率。</span></p></li><li><p><span>熟悉 常用并实践过多种 Java 设计模式（如单例、工厂、生成器、门面、注册器、适配器）。</span></p></li><li><p><span>熟悉 HTML、JavaScript、jQuery、Vue、React、Ajax等前台技术，Ajax、Axios 进行同步或异步数据交互，掌握前端开发框架，如 Vant，Element-Ui,Ant Design Vue，Ant Design Pro 的使用。</span></p></li><li><p><span>熟悉 Spring MVC、Spring Boot、MyBatis、Hibernate 等主流后端开发框架，熟悉 AOP、IOC 编程、PageHelper 分页插件，能独立开发项目。</span></p></li><li><p><span>熟悉 Redis ，掌握 Redission 分布式锁，分布式Session 的使用。</span></p></li><li><p><span>熟悉 Quartz 作业调度框架。</span></p></li><li><p><span>熟悉 Mysql，Oracle 数据库及库表设计，能够通过创建索引、Explain 分析、SQL语句优化等方式优化性能。</span></p></li><li><p><span>熟悉 常见业务开发场景：比如Nginx反向代理、全局跨域解决、多环境问题解决，Api签名认证，SpringBoot Starter SDK等。</span></p></li><li><p><span>熟悉 Linux 运维基本命令使用，如 find、tar、ps、netstat、top 等命令，有排查 cpu 占用过高、磁盘空间不足导致应用无法正常访问的经验。</span></p></li><li><p><span>熟悉炎黄低代码BPM平台的使用，如存储模型、表单模型、流程模型等配置。</span></p></li><li><p><span>掌握 Git/SVN版本控制、Maven构建和项目管理、Swagger/Knife4j API文档 等工具。</span></p></li><li><p><span>掌握 常用消息队列的基本使用（Kafka）。</span></p></li><li><p><span>了解 Docker容器化技术，能够编写Dockerfile将应用打包成镜像，确保环境一致性和部署效率。</span></p></li><li><p><span>了解 Spring Cloud 等分布式技术。熟悉各大组件的使用，如Nacos注册中心，Dubbo/OpenFeign远程服务调用、Gateway网关、负载均衡LoadBalancer、熔断限流Sentinel。</span></p></li><li><p><span>了解 ElasticSearch 搜索引擎，能用ElasticSearch实现分词搜索，使用Logstash、定时任务实现ElasticSearch和数据库进行数据同步。</span></p></li><li><p><span>了解 RAG知识库构建，能基于SpringAI实现文档收集、向量转换与存储、文档检索和查询增强的完整流程。</span></p></li><li><p><span>了解 PGvector向量数据库的使用，结合SpringAI的VectorStore实现AI知识库管理和RAG智能检索。</span></p></li><li><p><span>了解 响应式编程，能使用WebFlux实现非阻塞式异步操作，提高系统并发处理能力。</span></p></li></ul><h2 id='工作经历'><span>工作经历</span></h2><h4 id='北京嘉禾云网科技有限公司'><span>北京嘉禾云网科技有限公司</span></h4><p><span>2025.04.20 - 至今</span>
+<span>Java开发工程师 武汉</span></p><p><span>负责军工行业离散制造装配行业MES、ERP系统和的开发与维护工作，重点负责工时管理、质量管理、采购管理、库存管理等核心模块的设计与实现。</span></p><p><span>深入对接客户需求，进行需求分析与整理，编写详细开发文档，确保系统功能与业务需求高度匹配。</span></p><p><span>参与系统功能优化与迭代升级，持续提升系统稳定性和性能，保障生产管理流程的高效运行。</span></p><h4 id='上海威士顿信息科技股份有限公司'><span>上海威士顿信息科技股份有限公司</span></h4><p><span>2021.12.01 - 2024.12.20</span>
+<span>智能制造事业部 Java开发工程师 武汉</span></p><p><span>负责制造执行系统（MES）的开发与维护，专注于生产消耗、库存和质量管控等关键业务流程。</span></p><p><span>负责统计过程控制（SPC）的开发与维护，监控生产过程中的质量参数，实现实时质量控制。</span></p><p><span>负责厂区智能安防项目的开发与维护，主要对接海康威视平台，实现门禁控制、防区报警和入侵检测等功能。</span></p><p><span>根据需求文档进行分析设计，完成业务功能开发、单元测试、缺陷修复和维护工作。</span></p><h2 id='项目经历'><span>项目经历</span></h2><h4 id='erp-协同生产管理系统'><span>ERP 协同生产管理系统</span></h4><p><strong><span>软件架构</span></strong></p><p><span>Spring Boot + Feigin + Nacos + Redis + Oracle + MybatisPlus + Ireport报表 + Apache Poi生成Office文档 + Websocket + Quartz</span></p><p><strong><span>项目描述</span></strong></p><p><span>ERP系统覆盖销售、计划、采购、生产、库存、财务六大模块，以MRP计划引擎驱动产销协同，实现从订单到交付、从采购到结算的全流程数字化管理。</span></p><p><strong><span>责任描述</span></strong></p><p><span>主要参与MRP计划、采购到检验、生产执行等关键业务流程的开发、实施和运维。</span></p><p><span>参与项目的需求分析和功能设计，确保系统功能满足需求。</span></p><p><span>与客户保持沟通，收集反馈并持续优化系统功能。</span></p><p><strong><span>技术描述</span></strong></p><ul><li><p><span>MRP核心算法实现：设计基于BOM多级展开与提前期倒排的物料需求计算引擎，采用递归算法解析产品结构，结合Oracle存储过程处理复杂净需求运算，支撑物料高频计划运算。</span></p></li><li><p><span>数据一致性保障：针对库存扣减、工单领料等并发操作，采用Redis分布式锁机制，防止重复扣料，保证数据准确性。</span></p></li><li><p><span>针对ERP系统高频业务场景（如MRP运算、库存实时查询），基于Feign实现服务间调用熔断降级策略。配置Hystrix/Sentinel熔断规则，当下游服务（如库存中心、采购中心）响应超时或异常时，自动触发降级逻辑，返回兜底数据或缓存结果，避免级联故障，保障核心业务流程连续性。</span></p></li><li><p><span>针对生产质量检验场景复杂表单需求，集成帆软FineReport报表工具。通过拖拽式设计复杂填报模板，支持检验数据批量录入、自动计算合格率、异常数据高亮预警，替代传统Excel手工填报，提升质量数据采集效率与准确性。</span></p></li></ul><h4 id='武汉卷烟厂-mes-系统'><span>武汉卷烟厂 MES 系统</span></h4><p><strong><span>软件架构</span></strong></p><p><span>Spring + Hibernate + Oracle + Mybatis + Redis + Kafka + Websocket + Quartz + StimulSoft报表</span></p><p><strong><span>项目描述</span></strong></p><p><span>用于在制造过程中监控和控制车间的生产流程的制造执行管理系统，以提高生产效率和产品质量。MES系统通过集成生产设备、收集生产数据、监控生产过程，实现了生产流程的自动化和智能化。</span></p><p><strong><span>责任描述</span></strong></p><p><span>主要参与生产消耗、库存和质量管控等关键业务流程的开发和运维。</span></p><p><span>参与项目的需求分析和功能设计，确保系统功能满足生产需求。</span></p><p><span>与客户保持沟通，收集反馈并持续优化系统功能。</span></p><p><strong><span>技术描述</span></strong></p><ul><li><p><span>防止多个用户操作同一数据造成数据不一致的问题，使用 dataVersion 实现乐观锁机制，更新数据库时对比版本，保证数据一致性。</span></p></li><li><p><span>多数据源实现，通过实现Spring AbstractRoutingDataSource，不同业务模块使用独立数据源，降低系统耦合度。</span></p></li><li><p><span>Webservice和Restful接口日志，统一接收接口路径前缀，使用设计模式设计抽象类接收器，抽取公共方法，不同类型的接口具体实现不同的处理器，提升了接口的可维护性和扩展性，防止接口失败可以重放请求，重新发送或接收。</span></p></li><li><p><span>通过扩展 service 方法，实现可配置的 callback 机制，支持在方法执行前后动态配置和调用业务逻辑（如发送接口、消息提醒等），并可灵活设置 callback 的执行方式（同步/异步）和异常处理策略，降低系统耦合度，提升了程序可扩展性。</span></p></li><li><p><span>定时任务配置,项目启动时，获取定时任务配置信息（包含执行方法，上下文信息...），构建Quartz JobDetail,添加到scheduler任务调度器，执行定时任务,并通过分布式锁保证多机部署时定时任务不会重复执行。</span></p></li><li><p><span>系统中用到的魔法值，可维护code和name的对应关系，不用在代码里写死；自定义注解，在po实体转dto时，通过反射自动填充编码对应的名称，集中管理，提高程序的可维护性和扩展性，提高了接近1倍的开发效率。</span></p></li><li><p><span>结合Stimulsoft报表工具，使用生成器模式构建复杂的报表对象，使用线程池ThreadPoolExecutor并行查询数据，优化生成速度，生成速度提升了30%以上。</span></p></li><li><p><span>为实现可搜索上传文件内容，使用elasticsearch替代数据库的模糊搜索，使用动静分离策略创建文章索引，只在es中存储要搜索的字段、修改不频繁的字段（如文件名，文件内容、文件实体id），其它信息可关联数据库查询；</span>
+<span>并使用ik分词器实现更灵活的分词查询，减少es数据更新同步的成本、保证数据一致性，相比于传统模糊搜索搜索效率提升70%以上。</span></p></li><li><p><span>通过TCP,UDP,OPC,串口等通信协议实现和车间质量检测设备对接，实现检测数据采集，自动上传至MES质量检测工单，减少人员手工录入数据操作，提高工作效率。</span></p></li><li><p><span>通过配置需要采集的数据信息，根据工单或批次来通过查询实时数据库来获取数据采集信息并实时计算控制图，后端通过kafka获取数据进行消费处理，解决大规模实时数据的计算和处理问题，通过消息队列实现了数据处理的解耦和削峰，缓解了高并发情况下的系统资源短缺问题。</span></p></li><li><p><span>实时监控页面通过Websocket和后端建立长链接，后台处理完成的业务数据实时推送给web端，解决了生产数据实时展示的及时性问题，提供了更好的用户体验和实时交互能力。</span></p></li><li><p><span>自定义线程+处理队列实现单个数据采集点位的数据处理，可通过线程标识控制线程启停和监控，解决了数据处理的并发控制，实现了采集任务的管理和监控，支持动态调整和异常处理，实现对单个数采点的管控。</span></p></li></ul><h4 id='武汉卷烟厂智能安防平台'><strong><span>武汉卷烟厂智能安防平台</span></strong></h4><p><strong><span>软件架构</span></strong></p><p><span>SpringBoot + Spring Cloud Gateway + Feigin + Nacos + Redis + Oracle + Hibernate + Mybatis + ApachePoi</span></p><p><strong><span>项目描述</span></strong></p><p><span>基于海康威视设备的智能安防管理平台，实现报警信息实时接收、智能分级、自动处置等功能。采用微服务架构，支持百万级报警数据处理。</span></p><p><strong><span>责任描述</span></strong></p><p><span>负责报警信息接收模块开发，实现毫秒级报警数据接入和处理</span></p><p><span>设计并实现规则引擎，支持灵活配置报警规则、多级报警分发和升级和联动策略</span></p><p><span>开发设备管理模块，实现设备状态监控和远程控制</span></p><p><strong><span>技术描述</span></strong></p><ul><li><p><span>接收海康报警信息采用设计模式订阅-消费模式、模板方法模式和LinkedBlockingQueue阻塞队列实现事件调度，可灵活扩展接入不同类型的报警信息，提高程序可扩展性。</span></p></li><li><p><span>基于海康OpenApi实现监控点实时监控，通过视频流地址动态获取和用户鉴权实现各个监控点位的实时监控。</span></p></li><li><p><span>基于责任链模式的规则匹配，对各个场景如温度报警、重点人员识别、离岗检测、玩手机等场景根据不同的报警规则进行插件化的动作处理机制，支持规则热更新。</span></p></li><li><p><span>对数据量大的报警信息，采用线程池管理优化并发处理或分表处理，优化数据查询速度。</span></p></li><li><p><span>开发报警信息接口模块，设计API签名认证算法，为用户分配唯一AK/SK用于鉴权，保障接口调用的安全性。</span></p></li><li><p><span>为解决开发者调用成本过高的问题，基于 Spring Boot Starter 开发了客户端 SDK， 一行代码 即可调用接口，提高开发体验。</span></p></li><li><p><span>选用 Spring Cloud Gateway 作为 API 网关，实现了路由转发、访问控制、流量染色，并集中处理签名校验、请求参数校验、接口调用统计等业务逻辑，提高安全性的同时、便于系统开发维护。</span></p></li></ul><h2 id='自我评价'><span>自我评价</span></h2><ul><li><p><span>注重代码可读性，可维护性。</span></p></li><li><p><span>喜欢写技术博客，介绍自己在日常编写代码时遇到的问题，善于帮助他人。</span></p></li><li><p><span>良好的学习能力，对学习有一份执着与恒心，敢于尝试新鲜事物，并从中提升自己。</span></p></li><li><p><span>有较强的问的解决的能力，能够利用GitHub Issues区、AI工具、搜索引擎、StackOverflow等自主解决问题。</span></p></li><li><p><span>具有较强的团队精神，有强烈的集体荣誉感。</span></p></li><li><p><span>喜欢钻研新技术，敢于面对和克服困难。</span></p></li></ul></div></div>
 </body>
 </html>
